@@ -3,3 +3,5 @@ CONFIG_DATA_API_URL = f'{BASE_DATA_API_URL}/ticker/price'
 RAW_DATA_API_URL = f'{BASE_DATA_API_URL}/klines'
 RAW_DATA_API_COLUMNS = ['Open_time', 'Open', 'High', 'Low', 'Close', 'Volume', 'Close_time', 'quote_av', 'trades',  'tb_base_av', 'tb_quote_av', 'ignore']
 
+KAFKA_SERVERS = '192.168.35.64:9092'
+KAFKA_TOPIC = 'bitcoin-flink'
