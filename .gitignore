@@ -5,7 +5,9 @@ __pycache__/
 *$py.class
 log
 result
+result/*
 flink-1.17.0
+flink-1.17.0/*
 # C extensions
 *.so
 
