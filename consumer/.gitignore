@@ -1,7 +1,0 @@
-# Ignore Gradle project-specific cache directory
-.gradle
-./log
-./result
-./flink-1.17.0
-# Ignore Gradle build output directory
-build
