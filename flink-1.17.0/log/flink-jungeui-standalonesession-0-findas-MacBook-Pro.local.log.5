@@ -1,0 +1,225 @@
+2024-02-17 16:15:19,926 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - --------------------------------------------------------------------------------
+2024-02-17 16:15:19,927 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  Preconfiguration: 
+2024-02-17 16:15:19,927 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - 
+
+
+RESOURCE_PARAMS extraction logs:
+jvm_params: -Xmx1073741824 -Xms1073741824 -XX:MaxMetaspaceSize=268435456
+dynamic_configs: -D jobmanager.memory.off-heap.size=134217728b -D jobmanager.memory.jvm-overhead.min=201326592b -D jobmanager.memory.jvm-metaspace.size=268435456b -D jobmanager.memory.heap.size=1073741824b -D jobmanager.memory.jvm-overhead.max=201326592b
+logs: WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
+INFO  [] - Loading configuration property: taskmanager.memory.process.size, 1728m
+INFO  [] - Loading configuration property: jobmanager.bind-host, localhost
+INFO  [] - Loading configuration property: taskmanager.bind-host, localhost
+INFO  [] - Loading configuration property: taskmanager.host, localhost
+INFO  [] - Loading configuration property: parallelism.default, 1
+INFO  [] - Loading configuration property: jobmanager.execution.failover-strategy, region
+INFO  [] - Loading configuration property: jobmanager.rpc.address, localhost
+INFO  [] - Loading configuration property: taskmanager.numberOfTaskSlots, 1
+INFO  [] - Loading configuration property: rest.address, localhost
+INFO  [] - Loading configuration property: jobmanager.memory.process.size, 1600m
+INFO  [] - Loading configuration property: jobmanager.rpc.port, 6123
+INFO  [] - Loading configuration property: rest.bind-address, localhost
+INFO  [] - The derived from fraction jvm overhead memory (160.000mb (167772162 bytes)) is less than its min value 192.000mb (201326592 bytes), min value will be used instead
+INFO  [] - Final Master Memory configuration:
+INFO  [] -   Total Process Memory: 1.563gb (1677721600 bytes)
+INFO  [] -     Total Flink Memory: 1.125gb (1207959552 bytes)
+INFO  [] -       JVM Heap:         1024.000mb (1073741824 bytes)
+INFO  [] -       Off-heap:         128.000mb (134217728 bytes)
+INFO  [] -     JVM Metaspace:      256.000mb (268435456 bytes)
+INFO  [] -     JVM Overhead:       192.000mb (201326592 bytes)
+
+2024-02-17 16:15:19,927 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - --------------------------------------------------------------------------------
+2024-02-17 16:15:19,927 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  Starting StandaloneSessionClusterEntrypoint (Version: 1.17.0, Scala: 2.12, Rev:69ecda0, Date:2023-03-17T10:30:06+01:00)
+2024-02-17 16:15:19,927 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  OS current user: jungeui
+2024-02-17 16:15:19,927 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  Current Hadoop/Kerberos user: <no hadoop dependency found>
+2024-02-17 16:15:19,927 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  JVM: OpenJDK 64-Bit Server VM - Azul Systems, Inc. - 11/11.0.21+9-LTS
+2024-02-17 16:15:19,927 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  Arch: aarch64
+2024-02-17 16:15:19,927 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  Maximum heap size: 1024 MiBytes
+2024-02-17 16:15:19,927 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  JAVA_HOME: /Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home
+2024-02-17 16:15:19,927 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  No Hadoop Dependency available
+2024-02-17 16:15:19,927 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  JVM Options:
+2024-02-17 16:15:19,927 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -Xmx1073741824
+2024-02-17 16:15:19,927 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -Xms1073741824
+2024-02-17 16:15:19,927 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -XX:MaxMetaspaceSize=268435456
+2024-02-17 16:15:19,927 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -Dlog.file=/Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/log/flink-jungeui-standalonesession-0-findas-MacBook-Pro.local.log
+2024-02-17 16:15:19,927 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -Dlog4j.configuration=file:/Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/conf/log4j.properties
+2024-02-17 16:15:19,927 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -Dlog4j.configurationFile=file:/Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/conf/log4j.properties
+2024-02-17 16:15:19,927 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -Dlogback.configurationFile=file:/Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/conf/logback.xml
+2024-02-17 16:15:19,927 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  Program Arguments:
+2024-02-17 16:15:19,928 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -D
+2024-02-17 16:15:19,928 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     jobmanager.memory.off-heap.size=134217728b
+2024-02-17 16:15:19,928 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -D
+2024-02-17 16:15:19,928 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     jobmanager.memory.jvm-overhead.min=201326592b
+2024-02-17 16:15:19,928 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -D
+2024-02-17 16:15:19,928 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     jobmanager.memory.jvm-metaspace.size=268435456b
+2024-02-17 16:15:19,928 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -D
+2024-02-17 16:15:19,928 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     jobmanager.memory.heap.size=1073741824b
+2024-02-17 16:15:19,928 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -D
+2024-02-17 16:15:19,928 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     jobmanager.memory.jvm-overhead.max=201326592b
+2024-02-17 16:15:19,928 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --configDir
+2024-02-17 16:15:19,928 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     /Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/conf
+2024-02-17 16:15:19,928 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --executionMode
+2024-02-17 16:15:19,928 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     cluster
+2024-02-17 16:15:19,928 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  Classpath: /Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/lib/flink-cep-1.17.0.jar:/Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/lib/flink-connector-files-1.17.0.jar:/Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/lib/flink-csv-1.17.0.jar:/Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/lib/flink-json-1.17.0.jar:/Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/lib/flink-scala_2.12-1.17.0.jar:/Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/lib/flink-table-api-java-uber-1.17.0.jar:/Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/lib/flink-table-planner-loader-1.17.0.jar:/Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/lib/flink-table-runtime-1.17.0.jar:/Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/lib/log4j-1.2-api-2.17.1.jar:/Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/lib/log4j-api-2.17.1.jar:/Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/lib/log4j-core-2.17.1.jar:/Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/lib/log4j-slf4j-impl-2.17.1.jar:/Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/lib/flink-dist-1.17.0.jar::::
+2024-02-17 16:15:19,928 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - --------------------------------------------------------------------------------
+2024-02-17 16:15:19,929 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - Registered UNIX signal handlers for [TERM, HUP, INT]
+2024-02-17 16:15:19,935 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.memory.process.size, 1728m
+2024-02-17 16:15:19,935 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.bind-host, localhost
+2024-02-17 16:15:19,935 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.bind-host, localhost
+2024-02-17 16:15:19,935 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.host, localhost
+2024-02-17 16:15:19,935 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: parallelism.default, 1
+2024-02-17 16:15:19,935 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.execution.failover-strategy, region
+2024-02-17 16:15:19,935 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.rpc.address, localhost
+2024-02-17 16:15:19,935 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.numberOfTaskSlots, 1
+2024-02-17 16:15:19,935 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: rest.address, localhost
+2024-02-17 16:15:19,935 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.memory.process.size, 1600m
+2024-02-17 16:15:19,935 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.rpc.port, 6123
+2024-02-17 16:15:19,935 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: rest.bind-address, localhost
+2024-02-17 16:15:19,935 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: jobmanager.memory.off-heap.size, 134217728b
+2024-02-17 16:15:19,935 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: jobmanager.memory.jvm-overhead.min, 201326592b
+2024-02-17 16:15:19,935 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: jobmanager.memory.jvm-metaspace.size, 268435456b
+2024-02-17 16:15:19,935 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: jobmanager.memory.heap.size, 1073741824b
+2024-02-17 16:15:19,935 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: jobmanager.memory.jvm-overhead.max, 201326592b
+2024-02-17 16:15:19,950 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - Starting StandaloneSessionClusterEntrypoint.
+2024-02-17 16:15:19,968 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - Install default filesystem.
+2024-02-17 16:15:19,970 INFO  org.apache.flink.core.fs.FileSystem                          [] - Hadoop is not in the classpath/dependencies. The extended set of supported File Systems via Hadoop is not available.
+2024-02-17 16:15:19,978 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-statsd
+2024-02-17 16:15:19,981 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-prometheus
+2024-02-17 16:15:19,981 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-graphite
+2024-02-17 16:15:19,981 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: external-resource-gpu
+2024-02-17 16:15:19,981 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-jmx
+2024-02-17 16:15:19,981 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-influx
+2024-02-17 16:15:19,981 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-slf4j
+2024-02-17 16:15:19,981 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-datadog
+2024-02-17 16:15:19,992 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - Install security context.
+2024-02-17 16:15:19,999 INFO  org.apache.flink.runtime.security.modules.HadoopModuleFactory [] - Cannot create Hadoop Security Module because Hadoop cannot be found in the Classpath.
+2024-02-17 16:15:20,015 INFO  org.apache.flink.runtime.security.modules.JaasModule         [] - Jaas file will be created as /var/folders/yq/hx95c8bd3zn9mqv34g3gxbfc0000gp/T/jaas-14144016027771254991.conf.
+2024-02-17 16:15:20,019 INFO  org.apache.flink.runtime.security.contexts.HadoopSecurityContextFactory [] - Cannot install HadoopSecurityContext because Hadoop cannot be found in the Classpath.
+2024-02-17 16:15:20,020 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - Initializing cluster services.
+2024-02-17 16:15:20,032 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - Using working directory: WorkingDirectory(/var/folders/yq/hx95c8bd3zn9mqv34g3gxbfc0000gp/T/jm_e90f1b257e073511c281bf0738dcffad).
+2024-02-17 16:15:20,250 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils        [] - Trying to start actor system, external address localhost:6123, bind address localhost:6123.
+2024-02-17 16:15:20,620 INFO  akka.event.slf4j.Slf4jLogger                                 [] - Slf4jLogger started
+2024-02-17 16:15:20,633 INFO  akka.remote.RemoteActorRefProvider                           [] - Akka Cluster not in use - enabling unsafe features anyway because `akka.remote.use-unsafe-remote-features-outside-cluster` has been enabled.
+2024-02-17 16:15:20,633 INFO  akka.remote.Remoting                                         [] - Starting remoting
+2024-02-17 16:15:20,721 INFO  akka.remote.Remoting                                         [] - Remoting started; listening on addresses :[akka.tcp://flink@localhost:6123]
+2024-02-17 16:15:20,774 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils        [] - Actor system started at akka.tcp://flink@localhost:6123
+2024-02-17 16:15:20,786 INFO  org.apache.flink.runtime.blob.BlobServer                     [] - Created BLOB server storage directory /var/folders/yq/hx95c8bd3zn9mqv34g3gxbfc0000gp/T/jm_e90f1b257e073511c281bf0738dcffad/blobStorage
+2024-02-17 16:15:20,788 INFO  org.apache.flink.runtime.blob.BlobServer                     [] - Started BLOB server at 127.0.0.1:49237 - max concurrent requests: 50 - max backlog: 1000
+2024-02-17 16:15:20,792 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Loading delegation token providers
+2024-02-17 16:15:20,794 INFO  org.apache.flink.runtime.security.token.hadoop.HadoopFSDelegationTokenProvider [] - Hadoop FS is not available (not packaged with this application): NoClassDefFoundError : "org/apache/hadoop/conf/Configuration".
+2024-02-17 16:15:20,794 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Delegation token provider hadoopfs loaded and initialized
+2024-02-17 16:15:20,794 INFO  org.apache.flink.runtime.security.token.hadoop.HBaseDelegationTokenProvider [] - HBase is not available (not packaged with this application): NoClassDefFoundError : "org/apache/hadoop/conf/Configuration".
+2024-02-17 16:15:20,795 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Delegation token provider hbase loaded and initialized
+2024-02-17 16:15:20,795 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-statsd
+2024-02-17 16:15:20,795 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-prometheus
+2024-02-17 16:15:20,795 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-graphite
+2024-02-17 16:15:20,795 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: external-resource-gpu
+2024-02-17 16:15:20,795 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-jmx
+2024-02-17 16:15:20,795 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-influx
+2024-02-17 16:15:20,795 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-slf4j
+2024-02-17 16:15:20,795 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-datadog
+2024-02-17 16:15:20,796 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Delegation token providers loaded successfully
+2024-02-17 16:15:20,796 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Loading delegation token receivers
+2024-02-17 16:15:20,797 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Delegation token receiver hadoopfs loaded and initialized
+2024-02-17 16:15:20,797 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Delegation token receiver hbase loaded and initialized
+2024-02-17 16:15:20,797 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-statsd
+2024-02-17 16:15:20,797 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-prometheus
+2024-02-17 16:15:20,797 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-graphite
+2024-02-17 16:15:20,797 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: external-resource-gpu
+2024-02-17 16:15:20,797 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-jmx
+2024-02-17 16:15:20,797 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-influx
+2024-02-17 16:15:20,797 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-slf4j
+2024-02-17 16:15:20,797 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-datadog
+2024-02-17 16:15:20,798 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Delegation token receivers loaded successfully
+2024-02-17 16:15:20,798 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Checking provider and receiver instances consistency
+2024-02-17 16:15:20,798 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Provider and receiver instances are consistent
+2024-02-17 16:15:20,802 INFO  org.apache.flink.runtime.metrics.MetricRegistryImpl          [] - No metrics reporter configured, no metrics will be exposed/reported.
+2024-02-17 16:15:20,804 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils        [] - Trying to start actor system, external address localhost:0, bind address localhost:0.
+2024-02-17 16:15:20,812 INFO  akka.event.slf4j.Slf4jLogger                                 [] - Slf4jLogger started
+2024-02-17 16:15:20,813 INFO  akka.remote.RemoteActorRefProvider                           [] - Akka Cluster not in use - enabling unsafe features anyway because `akka.remote.use-unsafe-remote-features-outside-cluster` has been enabled.
+2024-02-17 16:15:20,814 INFO  akka.remote.Remoting                                         [] - Starting remoting
+2024-02-17 16:15:20,819 INFO  akka.remote.Remoting                                         [] - Remoting started; listening on addresses :[akka.tcp://flink-metrics@localhost:49238]
+2024-02-17 16:15:20,823 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils        [] - Actor system started at akka.tcp://flink-metrics@localhost:49238
+2024-02-17 16:15:20,829 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService             [] - Starting RPC endpoint for org.apache.flink.runtime.metrics.dump.MetricQueryService at akka://flink-metrics/user/rpc/MetricQueryService .
+2024-02-17 16:15:20,842 INFO  org.apache.flink.runtime.dispatcher.FileExecutionGraphInfoStore [] - Initializing FileExecutionGraphInfoStore: Storage directory /var/folders/yq/hx95c8bd3zn9mqv34g3gxbfc0000gp/T/executionGraphStore-57f77f1d-37f9-4338-96de-ad0ff9ad375c, expiration time 3600000, maximum cache size 52428800 bytes.
+2024-02-17 16:15:20,874 INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint   [] - Upload directory /var/folders/yq/hx95c8bd3zn9mqv34g3gxbfc0000gp/T/flink-web-5fbb1d13-ad7f-4892-92e7-ba052f2fee70/flink-web-upload does not exist. 
+2024-02-17 16:15:20,875 INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint   [] - Created directory /var/folders/yq/hx95c8bd3zn9mqv34g3gxbfc0000gp/T/flink-web-5fbb1d13-ad7f-4892-92e7-ba052f2fee70/flink-web-upload for file uploads.
+2024-02-17 16:15:20,876 INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint   [] - Starting rest endpoint.
+2024-02-17 16:15:21,010 INFO  org.apache.flink.runtime.webmonitor.WebMonitorUtils          [] - Determined location of main cluster component log file: /Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/log/flink-jungeui-standalonesession-0-findas-MacBook-Pro.local.log
+2024-02-17 16:15:21,010 INFO  org.apache.flink.runtime.webmonitor.WebMonitorUtils          [] - Determined location of main cluster component stdout file: /Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/log/flink-jungeui-standalonesession-0-findas-MacBook-Pro.local.out
+2024-02-17 16:15:21,072 INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint   [] - Rest endpoint listening at 127.0.0.1:8081
+2024-02-17 16:15:21,073 INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint   [] - http://127.0.0.1:8081 was granted leadership with leaderSessionID=00000000-0000-0000-0000-000000000000
+2024-02-17 16:15:21,073 INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint   [] - Web frontend listening at http://127.0.0.1:8081.
+2024-02-17 16:15:21,082 INFO  org.apache.flink.runtime.dispatcher.runner.DefaultDispatcherRunner [] - DefaultDispatcherRunner was granted leadership with leader id 00000000-0000-0000-0000-000000000000. Creating new DispatcherLeaderProcess.
+2024-02-17 16:15:21,084 INFO  org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess [] - Start SessionDispatcherLeaderProcess.
+2024-02-17 16:15:21,085 INFO  org.apache.flink.runtime.resourcemanager.ResourceManagerServiceImpl [] - Starting resource manager service.
+2024-02-17 16:15:21,086 INFO  org.apache.flink.runtime.resourcemanager.ResourceManagerServiceImpl [] - Resource manager service is granted leadership with session id 00000000-0000-0000-0000-000000000000.
+2024-02-17 16:15:21,086 INFO  org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess [] - Recover all persisted job graphs that are not finished, yet.
+2024-02-17 16:15:21,086 INFO  org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess [] - Successfully recovered 0 persisted job graphs.
+2024-02-17 16:15:21,094 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService             [] - Starting RPC endpoint for org.apache.flink.runtime.dispatcher.StandaloneDispatcher at akka://flink/user/rpc/dispatcher_0 .
+2024-02-17 16:15:21,095 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService             [] - Starting RPC endpoint for org.apache.flink.runtime.resourcemanager.StandaloneResourceManager at akka://flink/user/rpc/resourcemanager_1 .
+2024-02-17 16:15:21,105 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Starting the resource manager.
+2024-02-17 16:15:21,110 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Starting tokens update task
+2024-02-17 16:15:21,111 WARN  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - No tokens obtained so skipping listener notification
+2024-02-17 16:15:21,111 WARN  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Tokens update task not started because either no tokens obtained or none of the tokens specified its renewal date
+2024-02-17 16:15:27,025 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Registering TaskManager with ResourceID localhost:49245-18fcde (akka.tcp://flink@localhost:49245/user/rpc/taskmanager_0) at ResourceManager
+2024-02-17 16:15:38,208 WARN  org.apache.flink.runtime.webmonitor.handlers.JarRunHandler   [] - Configuring the job submission via query parameters is deprecated. Please migrate to submitting a JSON request instead.
+2024-02-17 16:15:38,239 INFO  org.apache.flink.client.ClientUtils                          [] - Starting program (detached: true)
+2024-02-17 16:15:38,275 INFO  org.apache.flink.api.java.typeutils.TypeExtractor            [] - Field Price#data will be processed as GenericType. Please read the Flink documentation on "Data Types & Serialization" for details of the effect on performance and schema evolution.
+2024-02-17 16:15:38,305 ERROR org.apache.flink.runtime.webmonitor.handlers.JarRunHandler   [] - Exception occurred in REST handler: No jobs included in application.
+2024-02-17 16:15:42,844 WARN  org.apache.flink.runtime.webmonitor.handlers.JarRunHandler   [] - Configuring the job submission via query parameters is deprecated. Please migrate to submitting a JSON request instead.
+2024-02-17 16:15:42,869 INFO  org.apache.flink.client.ClientUtils                          [] - Starting program (detached: true)
+2024-02-17 16:15:42,872 INFO  org.apache.flink.api.java.typeutils.TypeExtractor            [] - Field Price#data will be processed as GenericType. Please read the Flink documentation on "Data Types & Serialization" for details of the effect on performance and schema evolution.
+2024-02-17 16:15:42,875 ERROR org.apache.flink.runtime.webmonitor.handlers.JarRunHandler   [] - Exception occurred in REST handler: No jobs included in application.
+2024-02-17 16:15:52,089 WARN  org.apache.flink.runtime.webmonitor.handlers.JarRunHandler   [] - Configuring the job submission via query parameters is deprecated. Please migrate to submitting a JSON request instead.
+2024-02-17 16:15:52,103 INFO  org.apache.flink.client.ClientUtils                          [] - Starting program (detached: true)
+2024-02-17 16:15:52,112 INFO  org.apache.flink.api.java.typeutils.TypeExtractor            [] - Field Price#data will be processed as GenericType. Please read the Flink documentation on "Data Types & Serialization" for details of the effect on performance and schema evolution.
+2024-02-17 16:15:52,121 ERROR org.apache.flink.runtime.webmonitor.handlers.JarRunHandler   [] - Exception occurred in REST handler: No jobs included in application.
+2024-02-17 16:15:54,768 WARN  org.apache.flink.runtime.webmonitor.handlers.JarRunHandler   [] - Configuring the job submission via query parameters is deprecated. Please migrate to submitting a JSON request instead.
+2024-02-17 16:15:54,780 INFO  org.apache.flink.client.ClientUtils                          [] - Starting program (detached: true)
+2024-02-17 16:15:54,792 INFO  org.apache.flink.api.java.typeutils.TypeExtractor            [] - Field Price#data will be processed as GenericType. Please read the Flink documentation on "Data Types & Serialization" for details of the effect on performance and schema evolution.
+2024-02-17 16:15:54,801 ERROR org.apache.flink.runtime.webmonitor.handlers.JarRunHandler   [] - Exception occurred in REST handler: No jobs included in application.
+2024-02-17 16:16:10,875 WARN  org.apache.flink.runtime.webmonitor.handlers.JarRunHandler   [] - Configuring the job submission via query parameters is deprecated. Please migrate to submitting a JSON request instead.
+2024-02-17 16:16:10,936 INFO  org.apache.flink.client.ClientUtils                          [] - Starting program (detached: true)
+2024-02-17 16:16:10,942 INFO  org.apache.flink.api.java.typeutils.TypeExtractor            [] - Field Price#data will be processed as GenericType. Please read the Flink documentation on "Data Types & Serialization" for details of the effect on performance and schema evolution.
+2024-02-17 16:16:10,949 ERROR org.apache.flink.runtime.webmonitor.handlers.JarRunHandler   [] - Exception occurred in REST handler: No jobs included in application.
+2024-02-17 16:17:47,658 WARN  org.apache.flink.runtime.webmonitor.handlers.JarRunHandler   [] - Configuring the job submission via query parameters is deprecated. Please migrate to submitting a JSON request instead.
+2024-02-17 16:17:47,679 INFO  org.apache.flink.client.ClientUtils                          [] - Starting program (detached: true)
+2024-02-17 16:17:47,686 INFO  org.apache.flink.api.java.typeutils.TypeExtractor            [] - Field Price#data will be processed as GenericType. Please read the Flink documentation on "Data Types & Serialization" for details of the effect on performance and schema evolution.
+2024-02-17 16:17:47,695 ERROR org.apache.flink.runtime.webmonitor.handlers.JarRunHandler   [] - Exception occurred in REST handler: No jobs included in application.
+2024-02-17 16:17:48,417 WARN  org.apache.flink.runtime.webmonitor.handlers.JarRunHandler   [] - Configuring the job submission via query parameters is deprecated. Please migrate to submitting a JSON request instead.
+2024-02-17 16:17:48,426 INFO  org.apache.flink.client.ClientUtils                          [] - Starting program (detached: true)
+2024-02-17 16:17:48,430 INFO  org.apache.flink.api.java.typeutils.TypeExtractor            [] - Field Price#data will be processed as GenericType. Please read the Flink documentation on "Data Types & Serialization" for details of the effect on performance and schema evolution.
+2024-02-17 16:17:48,435 ERROR org.apache.flink.runtime.webmonitor.handlers.JarRunHandler   [] - Exception occurred in REST handler: No jobs included in application.
+2024-02-17 16:17:48,545 WARN  org.apache.flink.runtime.webmonitor.handlers.JarRunHandler   [] - Configuring the job submission via query parameters is deprecated. Please migrate to submitting a JSON request instead.
+2024-02-17 16:17:48,574 INFO  org.apache.flink.client.ClientUtils                          [] - Starting program (detached: true)
+2024-02-17 16:17:48,583 INFO  org.apache.flink.api.java.typeutils.TypeExtractor            [] - Field Price#data will be processed as GenericType. Please read the Flink documentation on "Data Types & Serialization" for details of the effect on performance and schema evolution.
+2024-02-17 16:17:48,590 ERROR org.apache.flink.runtime.webmonitor.handlers.JarRunHandler   [] - Exception occurred in REST handler: No jobs included in application.
+2024-02-17 16:17:48,754 WARN  org.apache.flink.runtime.webmonitor.handlers.JarRunHandler   [] - Configuring the job submission via query parameters is deprecated. Please migrate to submitting a JSON request instead.
+2024-02-17 16:17:48,778 INFO  org.apache.flink.client.ClientUtils                          [] - Starting program (detached: true)
+2024-02-17 16:17:48,785 INFO  org.apache.flink.api.java.typeutils.TypeExtractor            [] - Field Price#data will be processed as GenericType. Please read the Flink documentation on "Data Types & Serialization" for details of the effect on performance and schema evolution.
+2024-02-17 16:17:48,792 ERROR org.apache.flink.runtime.webmonitor.handlers.JarRunHandler   [] - Exception occurred in REST handler: No jobs included in application.
+2024-02-17 16:17:48,877 WARN  org.apache.flink.runtime.webmonitor.handlers.JarRunHandler   [] - Configuring the job submission via query parameters is deprecated. Please migrate to submitting a JSON request instead.
+2024-02-17 16:17:48,901 INFO  org.apache.flink.client.ClientUtils                          [] - Starting program (detached: true)
+2024-02-17 16:17:48,906 INFO  org.apache.flink.api.java.typeutils.TypeExtractor            [] - Field Price#data will be processed as GenericType. Please read the Flink documentation on "Data Types & Serialization" for details of the effect on performance and schema evolution.
+2024-02-17 16:17:48,911 ERROR org.apache.flink.runtime.webmonitor.handlers.JarRunHandler   [] - Exception occurred in REST handler: No jobs included in application.
+2024-02-17 16:17:48,985 WARN  org.apache.flink.runtime.webmonitor.handlers.JarRunHandler   [] - Configuring the job submission via query parameters is deprecated. Please migrate to submitting a JSON request instead.
+2024-02-17 16:17:48,993 INFO  org.apache.flink.client.ClientUtils                          [] - Starting program (detached: true)
+2024-02-17 16:17:48,998 INFO  org.apache.flink.api.java.typeutils.TypeExtractor            [] - Field Price#data will be processed as GenericType. Please read the Flink documentation on "Data Types & Serialization" for details of the effect on performance and schema evolution.
+2024-02-17 16:17:49,004 ERROR org.apache.flink.runtime.webmonitor.handlers.JarRunHandler   [] - Exception occurred in REST handler: No jobs included in application.
+2024-02-17 16:17:49,094 WARN  org.apache.flink.runtime.webmonitor.handlers.JarRunHandler   [] - Configuring the job submission via query parameters is deprecated. Please migrate to submitting a JSON request instead.
+2024-02-17 16:17:49,103 INFO  org.apache.flink.client.ClientUtils                          [] - Starting program (detached: true)
+2024-02-17 16:17:49,117 INFO  org.apache.flink.api.java.typeutils.TypeExtractor            [] - Field Price#data will be processed as GenericType. Please read the Flink documentation on "Data Types & Serialization" for details of the effect on performance and schema evolution.
+2024-02-17 16:17:49,124 ERROR org.apache.flink.runtime.webmonitor.handlers.JarRunHandler   [] - Exception occurred in REST handler: No jobs included in application.
+2024-02-17 16:17:49,224 WARN  org.apache.flink.runtime.webmonitor.handlers.JarRunHandler   [] - Configuring the job submission via query parameters is deprecated. Please migrate to submitting a JSON request instead.
+2024-02-17 16:17:49,238 INFO  org.apache.flink.client.ClientUtils                          [] - Starting program (detached: true)
+2024-02-17 16:17:49,244 INFO  org.apache.flink.api.java.typeutils.TypeExtractor            [] - Field Price#data will be processed as GenericType. Please read the Flink documentation on "Data Types & Serialization" for details of the effect on performance and schema evolution.
+2024-02-17 16:17:49,252 ERROR org.apache.flink.runtime.webmonitor.handlers.JarRunHandler   [] - Exception occurred in REST handler: No jobs included in application.
+2024-02-17 16:17:49,326 WARN  org.apache.flink.runtime.webmonitor.handlers.JarRunHandler   [] - Configuring the job submission via query parameters is deprecated. Please migrate to submitting a JSON request instead.
+2024-02-17 16:17:49,338 INFO  org.apache.flink.client.ClientUtils                          [] - Starting program (detached: true)
+2024-02-17 16:17:49,343 INFO  org.apache.flink.api.java.typeutils.TypeExtractor            [] - Field Price#data will be processed as GenericType. Please read the Flink documentation on "Data Types & Serialization" for details of the effect on performance and schema evolution.
+2024-02-17 16:17:49,350 ERROR org.apache.flink.runtime.webmonitor.handlers.JarRunHandler   [] - Exception occurred in REST handler: No jobs included in application.
+2024-02-17 16:18:48,114 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Closing TaskExecutor connection localhost:49245-18fcde because: The TaskExecutor is shutting down.
+2024-02-17 16:18:48,387 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - RECEIVED SIGNAL 15: SIGTERM. Shutting down as requested.
+2024-02-17 16:18:48,389 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - Shutting StandaloneSessionClusterEntrypoint down with application status UNKNOWN. Diagnostics Cluster entrypoint has been closed externally..
+2024-02-17 16:18:48,390 INFO  org.apache.flink.runtime.blob.BlobServer                     [] - Stopped BLOB server at 127.0.0.1:49237

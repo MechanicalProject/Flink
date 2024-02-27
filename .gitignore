@@ -3,6 +3,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
+./flink-1.17.0
 
 # C extensions
 *.so

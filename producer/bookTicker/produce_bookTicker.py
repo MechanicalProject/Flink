@@ -10,7 +10,7 @@ producer = KafkaProducer(bootstrap_servers=['localhost:29092'],
 base_url = "https://api.binance.com"
 
 # 현재가 
-api = """/api/v3/ticker/price?symbols=["BTCUSDC","ETHBTC","XRPBTC","ADABTC"]"""
+api = """/api/v3/ticker/bookTicker?symbols=["BTCUSDC","ETHBTC","XRPBTC","ADABTC"]"""
 def start():
     while True:
         response = requests.get(base_url  + api)

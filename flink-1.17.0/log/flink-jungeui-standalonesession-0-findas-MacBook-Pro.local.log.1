@@ -1,0 +1,1329 @@
+2024-02-16 17:56:28,660 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - --------------------------------------------------------------------------------
+2024-02-16 17:56:28,661 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  Preconfiguration: 
+2024-02-16 17:56:28,661 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - 
+
+
+RESOURCE_PARAMS extraction logs:
+jvm_params: -Xmx1073741824 -Xms1073741824 -XX:MaxMetaspaceSize=268435456
+dynamic_configs: -D jobmanager.memory.off-heap.size=134217728b -D jobmanager.memory.jvm-overhead.min=201326592b -D jobmanager.memory.jvm-metaspace.size=268435456b -D jobmanager.memory.heap.size=1073741824b -D jobmanager.memory.jvm-overhead.max=201326592b
+logs: WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
+INFO  [] - Loading configuration property: taskmanager.memory.process.size, 1728m
+INFO  [] - Loading configuration property: jobmanager.bind-host, localhost
+INFO  [] - Loading configuration property: taskmanager.bind-host, localhost
+INFO  [] - Loading configuration property: taskmanager.host, localhost
+INFO  [] - Loading configuration property: parallelism.default, 1
+INFO  [] - Loading configuration property: jobmanager.execution.failover-strategy, region
+INFO  [] - Loading configuration property: jobmanager.rpc.address, localhost
+INFO  [] - Loading configuration property: taskmanager.numberOfTaskSlots, 1
+INFO  [] - Loading configuration property: rest.address, localhost
+INFO  [] - Loading configuration property: jobmanager.memory.process.size, 1600m
+INFO  [] - Loading configuration property: jobmanager.rpc.port, 6123
+INFO  [] - Loading configuration property: rest.bind-address, localhost
+INFO  [] - The derived from fraction jvm overhead memory (160.000mb (167772162 bytes)) is less than its min value 192.000mb (201326592 bytes), min value will be used instead
+INFO  [] - Final Master Memory configuration:
+INFO  [] -   Total Process Memory: 1.563gb (1677721600 bytes)
+INFO  [] -     Total Flink Memory: 1.125gb (1207959552 bytes)
+INFO  [] -       JVM Heap:         1024.000mb (1073741824 bytes)
+INFO  [] -       Off-heap:         128.000mb (134217728 bytes)
+INFO  [] -     JVM Metaspace:      256.000mb (268435456 bytes)
+INFO  [] -     JVM Overhead:       192.000mb (201326592 bytes)
+
+2024-02-16 17:56:28,661 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - --------------------------------------------------------------------------------
+2024-02-16 17:56:28,661 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  Starting StandaloneSessionClusterEntrypoint (Version: 1.17.0, Scala: 2.12, Rev:69ecda0, Date:2023-03-17T10:30:06+01:00)
+2024-02-16 17:56:28,661 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  OS current user: jungeui
+2024-02-16 17:56:28,661 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  Current Hadoop/Kerberos user: <no hadoop dependency found>
+2024-02-16 17:56:28,662 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  JVM: OpenJDK 64-Bit Server VM - Azul Systems, Inc. - 11/11.0.21+9-LTS
+2024-02-16 17:56:28,662 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  Arch: aarch64
+2024-02-16 17:56:28,662 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  Maximum heap size: 1024 MiBytes
+2024-02-16 17:56:28,662 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  JAVA_HOME: /Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home
+2024-02-16 17:56:28,662 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  No Hadoop Dependency available
+2024-02-16 17:56:28,662 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  JVM Options:
+2024-02-16 17:56:28,662 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -Xmx1073741824
+2024-02-16 17:56:28,662 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -Xms1073741824
+2024-02-16 17:56:28,662 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -XX:MaxMetaspaceSize=268435456
+2024-02-16 17:56:28,662 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -Dlog.file=/Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/log/flink-jungeui-standalonesession-0-findas-MacBook-Pro.local.log
+2024-02-16 17:56:28,662 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -Dlog4j.configuration=file:/Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/conf/log4j.properties
+2024-02-16 17:56:28,662 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -Dlog4j.configurationFile=file:/Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/conf/log4j.properties
+2024-02-16 17:56:28,662 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -Dlogback.configurationFile=file:/Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/conf/logback.xml
+2024-02-16 17:56:28,662 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  Program Arguments:
+2024-02-16 17:56:28,662 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -D
+2024-02-16 17:56:28,662 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     jobmanager.memory.off-heap.size=134217728b
+2024-02-16 17:56:28,662 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -D
+2024-02-16 17:56:28,662 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     jobmanager.memory.jvm-overhead.min=201326592b
+2024-02-16 17:56:28,662 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -D
+2024-02-16 17:56:28,662 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     jobmanager.memory.jvm-metaspace.size=268435456b
+2024-02-16 17:56:28,662 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -D
+2024-02-16 17:56:28,662 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     jobmanager.memory.heap.size=1073741824b
+2024-02-16 17:56:28,662 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -D
+2024-02-16 17:56:28,663 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     jobmanager.memory.jvm-overhead.max=201326592b
+2024-02-16 17:56:28,663 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --configDir
+2024-02-16 17:56:28,663 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     /Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/conf
+2024-02-16 17:56:28,663 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --executionMode
+2024-02-16 17:56:28,663 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     cluster
+2024-02-16 17:56:28,663 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  Classpath: /Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/lib/flink-cep-1.17.0.jar:/Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/lib/flink-connector-files-1.17.0.jar:/Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/lib/flink-csv-1.17.0.jar:/Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/lib/flink-json-1.17.0.jar:/Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/lib/flink-scala_2.12-1.17.0.jar:/Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/lib/flink-table-api-java-uber-1.17.0.jar:/Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/lib/flink-table-planner-loader-1.17.0.jar:/Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/lib/flink-table-runtime-1.17.0.jar:/Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/lib/log4j-1.2-api-2.17.1.jar:/Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/lib/log4j-api-2.17.1.jar:/Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/lib/log4j-core-2.17.1.jar:/Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/lib/log4j-slf4j-impl-2.17.1.jar:/Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/lib/flink-dist-1.17.0.jar::::
+2024-02-16 17:56:28,663 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - --------------------------------------------------------------------------------
+2024-02-16 17:56:28,664 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - Registered UNIX signal handlers for [TERM, HUP, INT]
+2024-02-16 17:56:28,671 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.memory.process.size, 1728m
+2024-02-16 17:56:28,671 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.bind-host, localhost
+2024-02-16 17:56:28,671 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.bind-host, localhost
+2024-02-16 17:56:28,671 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.host, localhost
+2024-02-16 17:56:28,671 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: parallelism.default, 1
+2024-02-16 17:56:28,671 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.execution.failover-strategy, region
+2024-02-16 17:56:28,671 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.rpc.address, localhost
+2024-02-16 17:56:28,672 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.numberOfTaskSlots, 1
+2024-02-16 17:56:28,672 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: rest.address, localhost
+2024-02-16 17:56:28,672 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.memory.process.size, 1600m
+2024-02-16 17:56:28,672 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.rpc.port, 6123
+2024-02-16 17:56:28,672 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: rest.bind-address, localhost
+2024-02-16 17:56:28,672 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: jobmanager.memory.off-heap.size, 134217728b
+2024-02-16 17:56:28,672 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: jobmanager.memory.jvm-overhead.min, 201326592b
+2024-02-16 17:56:28,672 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: jobmanager.memory.jvm-metaspace.size, 268435456b
+2024-02-16 17:56:28,672 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: jobmanager.memory.heap.size, 1073741824b
+2024-02-16 17:56:28,672 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: jobmanager.memory.jvm-overhead.max, 201326592b
+2024-02-16 17:56:28,686 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - Starting StandaloneSessionClusterEntrypoint.
+2024-02-16 17:56:28,705 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - Install default filesystem.
+2024-02-16 17:56:28,707 INFO  org.apache.flink.core.fs.FileSystem                          [] - Hadoop is not in the classpath/dependencies. The extended set of supported File Systems via Hadoop is not available.
+2024-02-16 17:56:28,714 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-statsd
+2024-02-16 17:56:28,717 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-prometheus
+2024-02-16 17:56:28,717 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-graphite
+2024-02-16 17:56:28,717 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: external-resource-gpu
+2024-02-16 17:56:28,718 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-jmx
+2024-02-16 17:56:28,718 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-influx
+2024-02-16 17:56:28,718 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-slf4j
+2024-02-16 17:56:28,718 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-datadog
+2024-02-16 17:56:28,727 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - Install security context.
+2024-02-16 17:56:28,734 INFO  org.apache.flink.runtime.security.modules.HadoopModuleFactory [] - Cannot create Hadoop Security Module because Hadoop cannot be found in the Classpath.
+2024-02-16 17:56:28,751 INFO  org.apache.flink.runtime.security.modules.JaasModule         [] - Jaas file will be created as /var/folders/yq/hx95c8bd3zn9mqv34g3gxbfc0000gp/T/jaas-11014453301929017687.conf.
+2024-02-16 17:56:28,755 INFO  org.apache.flink.runtime.security.contexts.HadoopSecurityContextFactory [] - Cannot install HadoopSecurityContext because Hadoop cannot be found in the Classpath.
+2024-02-16 17:56:28,756 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - Initializing cluster services.
+2024-02-16 17:56:28,762 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - Using working directory: WorkingDirectory(/var/folders/yq/hx95c8bd3zn9mqv34g3gxbfc0000gp/T/jm_36f82da4fa08b47717870ea66f066594).
+2024-02-16 17:56:28,987 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils        [] - Trying to start actor system, external address localhost:6123, bind address localhost:6123.
+2024-02-16 17:56:29,357 INFO  akka.event.slf4j.Slf4jLogger                                 [] - Slf4jLogger started
+2024-02-16 17:56:29,370 INFO  akka.remote.RemoteActorRefProvider                           [] - Akka Cluster not in use - enabling unsafe features anyway because `akka.remote.use-unsafe-remote-features-outside-cluster` has been enabled.
+2024-02-16 17:56:29,370 INFO  akka.remote.Remoting                                         [] - Starting remoting
+2024-02-16 17:56:29,461 INFO  akka.remote.Remoting                                         [] - Remoting started; listening on addresses :[akka.tcp://flink@localhost:6123]
+2024-02-16 17:56:29,523 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils        [] - Actor system started at akka.tcp://flink@localhost:6123
+2024-02-16 17:56:29,540 INFO  org.apache.flink.runtime.blob.BlobServer                     [] - Created BLOB server storage directory /var/folders/yq/hx95c8bd3zn9mqv34g3gxbfc0000gp/T/jm_36f82da4fa08b47717870ea66f066594/blobStorage
+2024-02-16 17:56:29,543 INFO  org.apache.flink.runtime.blob.BlobServer                     [] - Started BLOB server at 127.0.0.1:57009 - max concurrent requests: 50 - max backlog: 1000
+2024-02-16 17:56:29,551 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Loading delegation token providers
+2024-02-16 17:56:29,553 INFO  org.apache.flink.runtime.security.token.hadoop.HadoopFSDelegationTokenProvider [] - Hadoop FS is not available (not packaged with this application): NoClassDefFoundError : "org/apache/hadoop/conf/Configuration".
+2024-02-16 17:56:29,554 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Delegation token provider hadoopfs loaded and initialized
+2024-02-16 17:56:29,554 INFO  org.apache.flink.runtime.security.token.hadoop.HBaseDelegationTokenProvider [] - HBase is not available (not packaged with this application): NoClassDefFoundError : "org/apache/hadoop/conf/Configuration".
+2024-02-16 17:56:29,554 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Delegation token provider hbase loaded and initialized
+2024-02-16 17:56:29,554 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-statsd
+2024-02-16 17:56:29,554 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-prometheus
+2024-02-16 17:56:29,554 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-graphite
+2024-02-16 17:56:29,554 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: external-resource-gpu
+2024-02-16 17:56:29,554 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-jmx
+2024-02-16 17:56:29,554 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-influx
+2024-02-16 17:56:29,554 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-slf4j
+2024-02-16 17:56:29,555 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-datadog
+2024-02-16 17:56:29,555 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Delegation token providers loaded successfully
+2024-02-16 17:56:29,555 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Loading delegation token receivers
+2024-02-16 17:56:29,557 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Delegation token receiver hadoopfs loaded and initialized
+2024-02-16 17:56:29,557 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Delegation token receiver hbase loaded and initialized
+2024-02-16 17:56:29,557 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-statsd
+2024-02-16 17:56:29,557 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-prometheus
+2024-02-16 17:56:29,557 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-graphite
+2024-02-16 17:56:29,557 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: external-resource-gpu
+2024-02-16 17:56:29,557 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-jmx
+2024-02-16 17:56:29,557 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-influx
+2024-02-16 17:56:29,558 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-slf4j
+2024-02-16 17:56:29,558 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-datadog
+2024-02-16 17:56:29,558 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Delegation token receivers loaded successfully
+2024-02-16 17:56:29,558 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Checking provider and receiver instances consistency
+2024-02-16 17:56:29,558 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Provider and receiver instances are consistent
+2024-02-16 17:56:29,563 INFO  org.apache.flink.runtime.metrics.MetricRegistryImpl          [] - No metrics reporter configured, no metrics will be exposed/reported.
+2024-02-16 17:56:29,565 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils        [] - Trying to start actor system, external address localhost:0, bind address localhost:0.
+2024-02-16 17:56:29,576 INFO  akka.event.slf4j.Slf4jLogger                                 [] - Slf4jLogger started
+2024-02-16 17:56:29,578 INFO  akka.remote.RemoteActorRefProvider                           [] - Akka Cluster not in use - enabling unsafe features anyway because `akka.remote.use-unsafe-remote-features-outside-cluster` has been enabled.
+2024-02-16 17:56:29,579 INFO  akka.remote.Remoting                                         [] - Starting remoting
+2024-02-16 17:56:29,585 INFO  akka.remote.Remoting                                         [] - Remoting started; listening on addresses :[akka.tcp://flink-metrics@localhost:57010]
+2024-02-16 17:56:29,590 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils        [] - Actor system started at akka.tcp://flink-metrics@localhost:57010
+2024-02-16 17:56:29,597 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService             [] - Starting RPC endpoint for org.apache.flink.runtime.metrics.dump.MetricQueryService at akka://flink-metrics/user/rpc/MetricQueryService .
+2024-02-16 17:56:29,609 INFO  org.apache.flink.runtime.dispatcher.FileExecutionGraphInfoStore [] - Initializing FileExecutionGraphInfoStore: Storage directory /var/folders/yq/hx95c8bd3zn9mqv34g3gxbfc0000gp/T/executionGraphStore-ce4989f7-17db-4192-96fa-46d557c26110, expiration time 3600000, maximum cache size 52428800 bytes.
+2024-02-16 17:56:29,646 INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint   [] - Upload directory /var/folders/yq/hx95c8bd3zn9mqv34g3gxbfc0000gp/T/flink-web-7de26722-0641-4877-b555-14191f4e225a/flink-web-upload does not exist. 
+2024-02-16 17:56:29,647 INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint   [] - Created directory /var/folders/yq/hx95c8bd3zn9mqv34g3gxbfc0000gp/T/flink-web-7de26722-0641-4877-b555-14191f4e225a/flink-web-upload for file uploads.
+2024-02-16 17:56:29,648 INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint   [] - Starting rest endpoint.
+2024-02-16 17:56:29,787 INFO  org.apache.flink.runtime.webmonitor.WebMonitorUtils          [] - Determined location of main cluster component log file: /Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/log/flink-jungeui-standalonesession-0-findas-MacBook-Pro.local.log
+2024-02-16 17:56:29,787 INFO  org.apache.flink.runtime.webmonitor.WebMonitorUtils          [] - Determined location of main cluster component stdout file: /Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/log/flink-jungeui-standalonesession-0-findas-MacBook-Pro.local.out
+2024-02-16 17:56:29,848 INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint   [] - Rest endpoint listening at 127.0.0.1:8081
+2024-02-16 17:56:29,849 INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint   [] - http://127.0.0.1:8081 was granted leadership with leaderSessionID=00000000-0000-0000-0000-000000000000
+2024-02-16 17:56:29,849 INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint   [] - Web frontend listening at http://127.0.0.1:8081.
+2024-02-16 17:56:29,863 INFO  org.apache.flink.runtime.dispatcher.runner.DefaultDispatcherRunner [] - DefaultDispatcherRunner was granted leadership with leader id 00000000-0000-0000-0000-000000000000. Creating new DispatcherLeaderProcess.
+2024-02-16 17:56:29,865 INFO  org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess [] - Start SessionDispatcherLeaderProcess.
+2024-02-16 17:56:29,866 INFO  org.apache.flink.runtime.resourcemanager.ResourceManagerServiceImpl [] - Starting resource manager service.
+2024-02-16 17:56:29,867 INFO  org.apache.flink.runtime.resourcemanager.ResourceManagerServiceImpl [] - Resource manager service is granted leadership with session id 00000000-0000-0000-0000-000000000000.
+2024-02-16 17:56:29,868 INFO  org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess [] - Recover all persisted job graphs that are not finished, yet.
+2024-02-16 17:56:29,868 INFO  org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess [] - Successfully recovered 0 persisted job graphs.
+2024-02-16 17:56:29,875 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService             [] - Starting RPC endpoint for org.apache.flink.runtime.dispatcher.StandaloneDispatcher at akka://flink/user/rpc/dispatcher_0 .
+2024-02-16 17:56:29,876 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService             [] - Starting RPC endpoint for org.apache.flink.runtime.resourcemanager.StandaloneResourceManager at akka://flink/user/rpc/resourcemanager_1 .
+2024-02-16 17:56:29,883 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Starting the resource manager.
+2024-02-16 17:56:29,890 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Starting tokens update task
+2024-02-16 17:56:29,891 WARN  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - No tokens obtained so skipping listener notification
+2024-02-16 17:56:29,891 WARN  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Tokens update task not started because either no tokens obtained or none of the tokens specified its renewal date
+2024-02-16 17:56:36,032 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Registering TaskManager with ResourceID localhost:57128-6336fc (akka.tcp://flink@localhost:57128/user/rpc/taskmanager_0) at ResourceManager
+2024-02-16 18:00:04,424 WARN  org.apache.flink.runtime.webmonitor.handlers.JarRunHandler   [] - Configuring the job submission via query parameters is deprecated. Please migrate to submitting a JSON request instead.
+2024-02-16 18:00:04,453 INFO  org.apache.flink.client.ClientUtils                          [] - Starting program (detached: true)
+2024-02-16 18:00:04,555 INFO  org.apache.flink.client.deployment.application.executors.EmbeddedExecutor [] - Job 6fbe0547894c92789dbe409c53e5a341 is submitted.
+2024-02-16 18:00:04,555 INFO  org.apache.flink.client.deployment.application.executors.EmbeddedExecutor [] - Submitting Job with JobId=6fbe0547894c92789dbe409c53e5a341.
+2024-02-16 18:00:04,922 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Received JobGraph submission 'Flink Kafka Consumer Example' (6fbe0547894c92789dbe409c53e5a341).
+2024-02-16 18:00:04,922 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Submitting job 'Flink Kafka Consumer Example' (6fbe0547894c92789dbe409c53e5a341).
+2024-02-16 18:00:04,934 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService             [] - Starting RPC endpoint for org.apache.flink.runtime.jobmaster.JobMaster at akka://flink/user/rpc/jobmanager_2 .
+2024-02-16 18:00:04,938 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Initializing job 'Flink Kafka Consumer Example' (6fbe0547894c92789dbe409c53e5a341).
+2024-02-16 18:00:04,947 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Using restart back off time strategy NoRestartBackoffTimeStrategy for Flink Kafka Consumer Example (6fbe0547894c92789dbe409c53e5a341).
+2024-02-16 18:00:04,961 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Created execution graph fbe3dd9c21083828c54a2f880285677e for job 6fbe0547894c92789dbe409c53e5a341.
+2024-02-16 18:00:04,969 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Running initialization on master for job Flink Kafka Consumer Example (6fbe0547894c92789dbe409c53e5a341).
+2024-02-16 18:00:04,969 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Successfully ran initialization on master in 0 ms.
+2024-02-16 18:00:04,977 INFO  org.apache.flink.runtime.scheduler.adapter.DefaultExecutionTopology [] - Built 1 new pipelined regions in 0 ms, total 1 pipelined regions currently.
+2024-02-16 18:00:04,979 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - No state backend has been configured, using default (HashMap) org.apache.flink.runtime.state.hashmap.HashMapStateBackend@1dd18d9
+2024-02-16 18:00:04,979 INFO  org.apache.flink.runtime.state.StateBackendLoader            [] - State backend loader loads the state backend as HashMapStateBackend
+2024-02-16 18:00:04,980 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Checkpoint storage is set to 'jobmanager'
+2024-02-16 18:00:04,994 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - No checkpoint found during restore.
+2024-02-16 18:00:04,997 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Using failover strategy org.apache.flink.runtime.executiongraph.failover.flip1.RestartPipelinedRegionFailoverStrategy@226c6e71 for Flink Kafka Consumer Example (6fbe0547894c92789dbe409c53e5a341).
+2024-02-16 18:00:05,002 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Starting execution of job 'Flink Kafka Consumer Example' (6fbe0547894c92789dbe409c53e5a341) under job master id 00000000000000000000000000000000.
+2024-02-16 18:00:05,003 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Starting scheduling with scheduling strategy [org.apache.flink.runtime.scheduler.strategy.PipelinedRegionSchedulingStrategy]
+2024-02-16 18:00:05,003 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Job Flink Kafka Consumer Example (6fbe0547894c92789dbe409c53e5a341) switched from state CREATED to RUNNING.
+2024-02-16 18:00:05,005 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Custom Source -> Sink: Print to Std. Out (1/1) (fbe3dd9c21083828c54a2f880285677e_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from CREATED to SCHEDULED.
+2024-02-16 18:00:05,010 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Connecting to ResourceManager akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*(00000000000000000000000000000000)
+2024-02-16 18:00:05,012 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Resolved ResourceManager address, beginning registration
+2024-02-16 18:00:05,013 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Registering job manager 00000000000000000000000000000000@akka.tcp://flink@localhost:6123/user/rpc/jobmanager_2 for job 6fbe0547894c92789dbe409c53e5a341.
+2024-02-16 18:00:05,015 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Registered job manager 00000000000000000000000000000000@akka.tcp://flink@localhost:6123/user/rpc/jobmanager_2 for job 6fbe0547894c92789dbe409c53e5a341.
+2024-02-16 18:00:05,016 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - JobManager successfully registered at ResourceManager, leader id: 00000000000000000000000000000000.
+2024-02-16 18:00:05,017 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.DeclarativeSlotManager [] - Received resource requirements from job 6fbe0547894c92789dbe409c53e5a341: [ResourceRequirement{resourceProfile=ResourceProfile{UNKNOWN}, numberOfRequiredSlots=1}]
+2024-02-16 18:00:05,116 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Custom Source -> Sink: Print to Std. Out (1/1) (fbe3dd9c21083828c54a2f880285677e_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from SCHEDULED to DEPLOYING.
+2024-02-16 18:00:05,117 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Deploying Source: Custom Source -> Sink: Print to Std. Out (1/1) (attempt #0) with attempt id fbe3dd9c21083828c54a2f880285677e_cbc357ccb763df2852fee8c4fc7d55f2_0_0 and vertex id cbc357ccb763df2852fee8c4fc7d55f2_0 to localhost:57128-6336fc @ localhost (dataPort=57137) with allocation id d49c536af3c7a0b0ee762130c72eb7d4
+2024-02-16 18:00:05,550 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Custom Source -> Sink: Print to Std. Out (1/1) (fbe3dd9c21083828c54a2f880285677e_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from DEPLOYING to INITIALIZING.
+2024-02-16 18:00:05,707 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Custom Source -> Sink: Print to Std. Out (1/1) (fbe3dd9c21083828c54a2f880285677e_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from INITIALIZING to FAILED on localhost:57128-6336fc @ localhost (dataPort=57137).
+org.apache.kafka.common.KafkaException: Failed to construct kafka consumer
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:825) ~[?:?]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:666) ~[?:?]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:647) ~[?:?]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:627) ~[?:?]
+	at org.apache.flink.streaming.connectors.kafka.internals.KafkaPartitionDiscoverer.initializeConnections(KafkaPartitionDiscoverer.java:55) ~[?:?]
+	at org.apache.flink.streaming.connectors.kafka.internals.AbstractPartitionDiscoverer.open(AbstractPartitionDiscoverer.java:94) ~[?:?]
+	at org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumerBase.open(FlinkKafkaConsumerBase.java:574) ~[?:?]
+	at org.apache.flink.api.common.functions.util.FunctionUtils.openFunction(FunctionUtils.java:34) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.api.operators.AbstractUdfStreamOperator.open(AbstractUdfStreamOperator.java:101) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.RegularOperatorChain.initializeStateAndOpenOperators(RegularOperatorChain.java:107) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restoreGates(StreamTask.java:734) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTaskActionExecutor$SynchronizedStreamTaskActionExecutor.call(StreamTaskActionExecutor.java:100) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restoreInternal(StreamTask.java:709) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restore(StreamTask.java:675) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.taskmanager.Task.runWithSystemExitMonitoring(Task.java:952) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.taskmanager.Task.restoreAndInvoke(Task.java:921) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.taskmanager.Task.doRun(Task.java:745) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.taskmanager.Task.run(Task.java:562) ~[flink-dist-1.17.0.jar:1.17.0]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]
+Caused by: org.apache.kafka.common.config.ConfigException: No resolvable bootstrap urls given in bootstrap.servers
+	at org.apache.kafka.clients.ClientUtils.parseAndValidateAddresses(ClientUtils.java:89) ~[?:?]
+	at org.apache.kafka.clients.ClientUtils.parseAndValidateAddresses(ClientUtils.java:48) ~[?:?]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:732) ~[?:?]
+	... 18 more
+2024-02-16 18:00:05,715 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.DeclarativeSlotManager [] - Clearing resource requirements of job 6fbe0547894c92789dbe409c53e5a341
+2024-02-16 18:00:05,717 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Job Flink Kafka Consumer Example (6fbe0547894c92789dbe409c53e5a341) switched from state RUNNING to FAILING.
+org.apache.flink.runtime.JobException: Recovery is suppressed by NoRestartBackoffTimeStrategy
+	at org.apache.flink.runtime.executiongraph.failover.flip1.ExecutionFailureHandler.handleFailure(ExecutionFailureHandler.java:139) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.executiongraph.failover.flip1.ExecutionFailureHandler.getFailureHandlingResult(ExecutionFailureHandler.java:83) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.recordTaskFailure(DefaultScheduler.java:258) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.handleTaskFailure(DefaultScheduler.java:249) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.onTaskFailed(DefaultScheduler.java:242) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.SchedulerBase.onTaskExecutionStateUpdate(SchedulerBase.java:748) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.SchedulerBase.updateTaskExecutionState(SchedulerBase.java:725) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.SchedulerNG.updateTaskExecutionState(SchedulerNG.java:80) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.jobmaster.JobMaster.updateTaskExecutionState(JobMaster.java:479) ~[flink-dist-1.17.0.jar:1.17.0]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.lambda$handleRpcInvocation$1(AkkaRpcActor.java:309) ~[flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at org.apache.flink.runtime.concurrent.akka.ClassLoadingUtils.runWithContextClassLoader(ClassLoadingUtils.java:83) ~[flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.handleRpcInvocation(AkkaRpcActor.java:307) ~[flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.handleRpcMessage(AkkaRpcActor.java:222) ~[flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at org.apache.flink.runtime.rpc.akka.FencedAkkaRpcActor.handleRpcMessage(FencedAkkaRpcActor.java:84) ~[flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.handleMessage(AkkaRpcActor.java:168) ~[flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:24) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:20) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at scala.PartialFunction.applyOrElse(PartialFunction.scala:127) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:126) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:20) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:175) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.actor.Actor.aroundReceive(Actor.scala:537) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.actor.Actor.aroundReceive$(Actor.scala:535) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.actor.AbstractActor.aroundReceive(AbstractActor.scala:220) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:579) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.actor.ActorCell.invoke(ActorCell.scala:547) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:270) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.dispatch.Mailbox.run(Mailbox.scala:231) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:243) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290) [?:?]
+	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020) [?:?]
+	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656) [?:?]
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594) [?:?]
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183) [?:?]
+Caused by: org.apache.kafka.common.KafkaException: Failed to construct kafka consumer
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:825) ~[?:?]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:666) ~[?:?]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:647) ~[?:?]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:627) ~[?:?]
+	at org.apache.flink.streaming.connectors.kafka.internals.KafkaPartitionDiscoverer.initializeConnections(KafkaPartitionDiscoverer.java:55) ~[?:?]
+	at org.apache.flink.streaming.connectors.kafka.internals.AbstractPartitionDiscoverer.open(AbstractPartitionDiscoverer.java:94) ~[?:?]
+	at org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumerBase.open(FlinkKafkaConsumerBase.java:574) ~[?:?]
+	at org.apache.flink.api.common.functions.util.FunctionUtils.openFunction(FunctionUtils.java:34) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.api.operators.AbstractUdfStreamOperator.open(AbstractUdfStreamOperator.java:101) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.RegularOperatorChain.initializeStateAndOpenOperators(RegularOperatorChain.java:107) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restoreGates(StreamTask.java:734) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTaskActionExecutor$SynchronizedStreamTaskActionExecutor.call(StreamTaskActionExecutor.java:100) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restoreInternal(StreamTask.java:709) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restore(StreamTask.java:675) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.taskmanager.Task.runWithSystemExitMonitoring(Task.java:952) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.taskmanager.Task.restoreAndInvoke(Task.java:921) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.taskmanager.Task.doRun(Task.java:745) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.taskmanager.Task.run(Task.java:562) ~[flink-dist-1.17.0.jar:1.17.0]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]
+Caused by: org.apache.kafka.common.config.ConfigException: No resolvable bootstrap urls given in bootstrap.servers
+	at org.apache.kafka.clients.ClientUtils.parseAndValidateAddresses(ClientUtils.java:89) ~[?:?]
+	at org.apache.kafka.clients.ClientUtils.parseAndValidateAddresses(ClientUtils.java:48) ~[?:?]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:732) ~[?:?]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:666) ~[?:?]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:647) ~[?:?]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:627) ~[?:?]
+	at org.apache.flink.streaming.connectors.kafka.internals.KafkaPartitionDiscoverer.initializeConnections(KafkaPartitionDiscoverer.java:55) ~[?:?]
+	at org.apache.flink.streaming.connectors.kafka.internals.AbstractPartitionDiscoverer.open(AbstractPartitionDiscoverer.java:94) ~[?:?]
+	at org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumerBase.open(FlinkKafkaConsumerBase.java:574) ~[?:?]
+	at org.apache.flink.api.common.functions.util.FunctionUtils.openFunction(FunctionUtils.java:34) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.api.operators.AbstractUdfStreamOperator.open(AbstractUdfStreamOperator.java:101) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.RegularOperatorChain.initializeStateAndOpenOperators(RegularOperatorChain.java:107) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restoreGates(StreamTask.java:734) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTaskActionExecutor$SynchronizedStreamTaskActionExecutor.call(StreamTaskActionExecutor.java:100) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restoreInternal(StreamTask.java:709) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restore(StreamTask.java:675) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.taskmanager.Task.runWithSystemExitMonitoring(Task.java:952) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.taskmanager.Task.restoreAndInvoke(Task.java:921) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.taskmanager.Task.doRun(Task.java:745) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.taskmanager.Task.run(Task.java:562) ~[flink-dist-1.17.0.jar:1.17.0]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]
+2024-02-16 18:00:05,720 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Job Flink Kafka Consumer Example (6fbe0547894c92789dbe409c53e5a341) switched from state FAILING to FAILED.
+org.apache.flink.runtime.JobException: Recovery is suppressed by NoRestartBackoffTimeStrategy
+	at org.apache.flink.runtime.executiongraph.failover.flip1.ExecutionFailureHandler.handleFailure(ExecutionFailureHandler.java:139) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.executiongraph.failover.flip1.ExecutionFailureHandler.getFailureHandlingResult(ExecutionFailureHandler.java:83) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.recordTaskFailure(DefaultScheduler.java:258) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.handleTaskFailure(DefaultScheduler.java:249) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.onTaskFailed(DefaultScheduler.java:242) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.SchedulerBase.onTaskExecutionStateUpdate(SchedulerBase.java:748) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.SchedulerBase.updateTaskExecutionState(SchedulerBase.java:725) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.SchedulerNG.updateTaskExecutionState(SchedulerNG.java:80) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.jobmaster.JobMaster.updateTaskExecutionState(JobMaster.java:479) ~[flink-dist-1.17.0.jar:1.17.0]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.lambda$handleRpcInvocation$1(AkkaRpcActor.java:309) ~[flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at org.apache.flink.runtime.concurrent.akka.ClassLoadingUtils.runWithContextClassLoader(ClassLoadingUtils.java:83) ~[flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.handleRpcInvocation(AkkaRpcActor.java:307) ~[flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.handleRpcMessage(AkkaRpcActor.java:222) ~[flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at org.apache.flink.runtime.rpc.akka.FencedAkkaRpcActor.handleRpcMessage(FencedAkkaRpcActor.java:84) ~[flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.handleMessage(AkkaRpcActor.java:168) ~[flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:24) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:20) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at scala.PartialFunction.applyOrElse(PartialFunction.scala:127) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:126) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:20) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:175) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.actor.Actor.aroundReceive(Actor.scala:537) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.actor.Actor.aroundReceive$(Actor.scala:535) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.actor.AbstractActor.aroundReceive(AbstractActor.scala:220) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:579) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.actor.ActorCell.invoke(ActorCell.scala:547) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:270) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.dispatch.Mailbox.run(Mailbox.scala:231) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:243) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290) [?:?]
+	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020) [?:?]
+	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656) [?:?]
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594) [?:?]
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183) [?:?]
+Caused by: org.apache.kafka.common.KafkaException: Failed to construct kafka consumer
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:825) ~[?:?]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:666) ~[?:?]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:647) ~[?:?]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:627) ~[?:?]
+	at org.apache.flink.streaming.connectors.kafka.internals.KafkaPartitionDiscoverer.initializeConnections(KafkaPartitionDiscoverer.java:55) ~[?:?]
+	at org.apache.flink.streaming.connectors.kafka.internals.AbstractPartitionDiscoverer.open(AbstractPartitionDiscoverer.java:94) ~[?:?]
+	at org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumerBase.open(FlinkKafkaConsumerBase.java:574) ~[?:?]
+	at org.apache.flink.api.common.functions.util.FunctionUtils.openFunction(FunctionUtils.java:34) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.api.operators.AbstractUdfStreamOperator.open(AbstractUdfStreamOperator.java:101) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.RegularOperatorChain.initializeStateAndOpenOperators(RegularOperatorChain.java:107) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restoreGates(StreamTask.java:734) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTaskActionExecutor$SynchronizedStreamTaskActionExecutor.call(StreamTaskActionExecutor.java:100) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restoreInternal(StreamTask.java:709) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restore(StreamTask.java:675) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.taskmanager.Task.runWithSystemExitMonitoring(Task.java:952) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.taskmanager.Task.restoreAndInvoke(Task.java:921) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.taskmanager.Task.doRun(Task.java:745) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.taskmanager.Task.run(Task.java:562) ~[flink-dist-1.17.0.jar:1.17.0]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]
+Caused by: org.apache.kafka.common.config.ConfigException: No resolvable bootstrap urls given in bootstrap.servers
+	at org.apache.kafka.clients.ClientUtils.parseAndValidateAddresses(ClientUtils.java:89) ~[?:?]
+	at org.apache.kafka.clients.ClientUtils.parseAndValidateAddresses(ClientUtils.java:48) ~[?:?]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:732) ~[?:?]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:666) ~[?:?]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:647) ~[?:?]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:627) ~[?:?]
+	at org.apache.flink.streaming.connectors.kafka.internals.KafkaPartitionDiscoverer.initializeConnections(KafkaPartitionDiscoverer.java:55) ~[?:?]
+	at org.apache.flink.streaming.connectors.kafka.internals.AbstractPartitionDiscoverer.open(AbstractPartitionDiscoverer.java:94) ~[?:?]
+	at org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumerBase.open(FlinkKafkaConsumerBase.java:574) ~[?:?]
+	at org.apache.flink.api.common.functions.util.FunctionUtils.openFunction(FunctionUtils.java:34) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.api.operators.AbstractUdfStreamOperator.open(AbstractUdfStreamOperator.java:101) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.RegularOperatorChain.initializeStateAndOpenOperators(RegularOperatorChain.java:107) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restoreGates(StreamTask.java:734) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTaskActionExecutor$SynchronizedStreamTaskActionExecutor.call(StreamTaskActionExecutor.java:100) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restoreInternal(StreamTask.java:709) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restore(StreamTask.java:675) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.taskmanager.Task.runWithSystemExitMonitoring(Task.java:952) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.taskmanager.Task.restoreAndInvoke(Task.java:921) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.taskmanager.Task.doRun(Task.java:745) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.taskmanager.Task.run(Task.java:562) ~[flink-dist-1.17.0.jar:1.17.0]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]
+2024-02-16 18:00:05,721 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Stopping checkpoint coordinator for job 6fbe0547894c92789dbe409c53e5a341.
+2024-02-16 18:00:05,726 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Job 6fbe0547894c92789dbe409c53e5a341 reached terminal state FAILED.
+org.apache.flink.runtime.JobException: Recovery is suppressed by NoRestartBackoffTimeStrategy
+	at org.apache.flink.runtime.executiongraph.failover.flip1.ExecutionFailureHandler.handleFailure(ExecutionFailureHandler.java:139)
+	at org.apache.flink.runtime.executiongraph.failover.flip1.ExecutionFailureHandler.getFailureHandlingResult(ExecutionFailureHandler.java:83)
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.recordTaskFailure(DefaultScheduler.java:258)
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.handleTaskFailure(DefaultScheduler.java:249)
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.onTaskFailed(DefaultScheduler.java:242)
+	at org.apache.flink.runtime.scheduler.SchedulerBase.onTaskExecutionStateUpdate(SchedulerBase.java:748)
+	at org.apache.flink.runtime.scheduler.SchedulerBase.updateTaskExecutionState(SchedulerBase.java:725)
+	at org.apache.flink.runtime.scheduler.SchedulerNG.updateTaskExecutionState(SchedulerNG.java:80)
+	at org.apache.flink.runtime.jobmaster.JobMaster.updateTaskExecutionState(JobMaster.java:479)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.lambda$handleRpcInvocation$1(AkkaRpcActor.java:309)
+	at org.apache.flink.runtime.concurrent.akka.ClassLoadingUtils.runWithContextClassLoader(ClassLoadingUtils.java:83)
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.handleRpcInvocation(AkkaRpcActor.java:307)
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.handleRpcMessage(AkkaRpcActor.java:222)
+	at org.apache.flink.runtime.rpc.akka.FencedAkkaRpcActor.handleRpcMessage(FencedAkkaRpcActor.java:84)
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.handleMessage(AkkaRpcActor.java:168)
+	at akka.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:24)
+	at akka.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:20)
+	at scala.PartialFunction.applyOrElse(PartialFunction.scala:127)
+	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:126)
+	at akka.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:20)
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:175)
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176)
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176)
+	at akka.actor.Actor.aroundReceive(Actor.scala:537)
+	at akka.actor.Actor.aroundReceive$(Actor.scala:535)
+	at akka.actor.AbstractActor.aroundReceive(AbstractActor.scala:220)
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:579)
+	at akka.actor.ActorCell.invoke(ActorCell.scala:547)
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:270)
+	at akka.dispatch.Mailbox.run(Mailbox.scala:231)
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:243)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
+Caused by: org.apache.kafka.common.KafkaException: Failed to construct kafka consumer
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:825)
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:666)
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:647)
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:627)
+	at org.apache.flink.streaming.connectors.kafka.internals.KafkaPartitionDiscoverer.initializeConnections(KafkaPartitionDiscoverer.java:55)
+	at org.apache.flink.streaming.connectors.kafka.internals.AbstractPartitionDiscoverer.open(AbstractPartitionDiscoverer.java:94)
+	at org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumerBase.open(FlinkKafkaConsumerBase.java:574)
+	at org.apache.flink.api.common.functions.util.FunctionUtils.openFunction(FunctionUtils.java:34)
+	at org.apache.flink.streaming.api.operators.AbstractUdfStreamOperator.open(AbstractUdfStreamOperator.java:101)
+	at org.apache.flink.streaming.runtime.tasks.RegularOperatorChain.initializeStateAndOpenOperators(RegularOperatorChain.java:107)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restoreGates(StreamTask.java:734)
+	at org.apache.flink.streaming.runtime.tasks.StreamTaskActionExecutor$SynchronizedStreamTaskActionExecutor.call(StreamTaskActionExecutor.java:100)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restoreInternal(StreamTask.java:709)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restore(StreamTask.java:675)
+	at org.apache.flink.runtime.taskmanager.Task.runWithSystemExitMonitoring(Task.java:952)
+	at org.apache.flink.runtime.taskmanager.Task.restoreAndInvoke(Task.java:921)
+	at org.apache.flink.runtime.taskmanager.Task.doRun(Task.java:745)
+	at org.apache.flink.runtime.taskmanager.Task.run(Task.java:562)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.apache.kafka.common.config.ConfigException: No resolvable bootstrap urls given in bootstrap.servers
+	at org.apache.kafka.clients.ClientUtils.parseAndValidateAddresses(ClientUtils.java:89)
+	at org.apache.kafka.clients.ClientUtils.parseAndValidateAddresses(ClientUtils.java:48)
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:732)
+	... 18 more
+2024-02-16 18:00:05,737 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Job 6fbe0547894c92789dbe409c53e5a341 has been registered for cleanup in the JobResultStore after reaching a terminal state.
+2024-02-16 18:00:05,739 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Stopping the JobMaster for job 'Flink Kafka Consumer Example' (6fbe0547894c92789dbe409c53e5a341).
+2024-02-16 18:00:05,740 INFO  org.apache.flink.runtime.checkpoint.StandaloneCompletedCheckpointStore [] - Shutting down
+2024-02-16 18:00:05,741 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Disconnect TaskExecutor localhost:57128-6336fc because: Stopping JobMaster for job 'Flink Kafka Consumer Example' (6fbe0547894c92789dbe409c53e5a341).
+2024-02-16 18:00:05,741 INFO  org.apache.flink.runtime.jobmaster.slotpool.DefaultDeclarativeSlotPool [] - Releasing slot [d49c536af3c7a0b0ee762130c72eb7d4].
+2024-02-16 18:00:05,741 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Close ResourceManager connection 36f82da4fa08b47717870ea66f066594: Stopping JobMaster for job 'Flink Kafka Consumer Example' (6fbe0547894c92789dbe409c53e5a341).
+2024-02-16 18:00:05,742 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Disconnect job manager 00000000000000000000000000000000@akka.tcp://flink@localhost:6123/user/rpc/jobmanager_2 for job 6fbe0547894c92789dbe409c53e5a341 from the resource manager.
+2024-02-16 18:05:18,208 WARN  org.apache.flink.runtime.webmonitor.handlers.JarRunHandler   [] - Configuring the job submission via query parameters is deprecated. Please migrate to submitting a JSON request instead.
+2024-02-16 18:05:18,264 INFO  org.apache.flink.client.ClientUtils                          [] - Starting program (detached: true)
+2024-02-16 18:05:18,282 INFO  org.apache.flink.client.deployment.application.executors.EmbeddedExecutor [] - Job f94e87975c125c52d4c61665811f5095 is submitted.
+2024-02-16 18:05:18,282 INFO  org.apache.flink.client.deployment.application.executors.EmbeddedExecutor [] - Submitting Job with JobId=f94e87975c125c52d4c61665811f5095.
+2024-02-16 18:05:18,634 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Received JobGraph submission 'Flink Kafka Consumer Example' (f94e87975c125c52d4c61665811f5095).
+2024-02-16 18:05:18,634 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Submitting job 'Flink Kafka Consumer Example' (f94e87975c125c52d4c61665811f5095).
+2024-02-16 18:05:18,635 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService             [] - Starting RPC endpoint for org.apache.flink.runtime.jobmaster.JobMaster at akka://flink/user/rpc/jobmanager_3 .
+2024-02-16 18:05:18,635 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Initializing job 'Flink Kafka Consumer Example' (f94e87975c125c52d4c61665811f5095).
+2024-02-16 18:05:18,636 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Using restart back off time strategy NoRestartBackoffTimeStrategy for Flink Kafka Consumer Example (f94e87975c125c52d4c61665811f5095).
+2024-02-16 18:05:18,636 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Created execution graph 3f810877e9d8a1a3fb83a6dfb0e5d97b for job f94e87975c125c52d4c61665811f5095.
+2024-02-16 18:05:18,636 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Running initialization on master for job Flink Kafka Consumer Example (f94e87975c125c52d4c61665811f5095).
+2024-02-16 18:05:18,636 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Successfully ran initialization on master in 0 ms.
+2024-02-16 18:05:18,636 INFO  org.apache.flink.runtime.scheduler.adapter.DefaultExecutionTopology [] - Built 1 new pipelined regions in 0 ms, total 1 pipelined regions currently.
+2024-02-16 18:05:18,636 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - No state backend has been configured, using default (HashMap) org.apache.flink.runtime.state.hashmap.HashMapStateBackend@20d80f61
+2024-02-16 18:05:18,637 INFO  org.apache.flink.runtime.state.StateBackendLoader            [] - State backend loader loads the state backend as HashMapStateBackend
+2024-02-16 18:05:18,637 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Checkpoint storage is set to 'jobmanager'
+2024-02-16 18:05:18,637 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - No checkpoint found during restore.
+2024-02-16 18:05:18,637 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Using failover strategy org.apache.flink.runtime.executiongraph.failover.flip1.RestartPipelinedRegionFailoverStrategy@51b4eabd for Flink Kafka Consumer Example (f94e87975c125c52d4c61665811f5095).
+2024-02-16 18:05:18,637 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Starting execution of job 'Flink Kafka Consumer Example' (f94e87975c125c52d4c61665811f5095) under job master id 00000000000000000000000000000000.
+2024-02-16 18:05:18,637 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Starting scheduling with scheduling strategy [org.apache.flink.runtime.scheduler.strategy.PipelinedRegionSchedulingStrategy]
+2024-02-16 18:05:18,637 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Job Flink Kafka Consumer Example (f94e87975c125c52d4c61665811f5095) switched from state CREATED to RUNNING.
+2024-02-16 18:05:18,637 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Custom Source -> Sink: Print to Std. Out (1/1) (3f810877e9d8a1a3fb83a6dfb0e5d97b_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from CREATED to SCHEDULED.
+2024-02-16 18:05:18,638 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Connecting to ResourceManager akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*(00000000000000000000000000000000)
+2024-02-16 18:05:18,638 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Resolved ResourceManager address, beginning registration
+2024-02-16 18:05:18,638 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Registering job manager 00000000000000000000000000000000@akka.tcp://flink@localhost:6123/user/rpc/jobmanager_3 for job f94e87975c125c52d4c61665811f5095.
+2024-02-16 18:05:18,638 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Registered job manager 00000000000000000000000000000000@akka.tcp://flink@localhost:6123/user/rpc/jobmanager_3 for job f94e87975c125c52d4c61665811f5095.
+2024-02-16 18:05:18,638 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - JobManager successfully registered at ResourceManager, leader id: 00000000000000000000000000000000.
+2024-02-16 18:05:18,639 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.DeclarativeSlotManager [] - Received resource requirements from job f94e87975c125c52d4c61665811f5095: [ResourceRequirement{resourceProfile=ResourceProfile{UNKNOWN}, numberOfRequiredSlots=1}]
+2024-02-16 18:05:18,718 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Custom Source -> Sink: Print to Std. Out (1/1) (3f810877e9d8a1a3fb83a6dfb0e5d97b_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from SCHEDULED to DEPLOYING.
+2024-02-16 18:05:18,719 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Deploying Source: Custom Source -> Sink: Print to Std. Out (1/1) (attempt #0) with attempt id 3f810877e9d8a1a3fb83a6dfb0e5d97b_cbc357ccb763df2852fee8c4fc7d55f2_0_0 and vertex id cbc357ccb763df2852fee8c4fc7d55f2_0 to localhost:57128-6336fc @ localhost (dataPort=57137) with allocation id bf566cbd724b8702e2cc41dfaeff0344
+2024-02-16 18:05:19,062 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Custom Source -> Sink: Print to Std. Out (1/1) (3f810877e9d8a1a3fb83a6dfb0e5d97b_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from DEPLOYING to INITIALIZING.
+2024-02-16 18:05:19,105 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Custom Source -> Sink: Print to Std. Out (1/1) (3f810877e9d8a1a3fb83a6dfb0e5d97b_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from INITIALIZING to FAILED on localhost:57128-6336fc @ localhost (dataPort=57137).
+org.apache.kafka.common.KafkaException: Failed to construct kafka consumer
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:825) ~[?:?]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:666) ~[?:?]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:647) ~[?:?]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:627) ~[?:?]
+	at org.apache.flink.streaming.connectors.kafka.internals.KafkaPartitionDiscoverer.initializeConnections(KafkaPartitionDiscoverer.java:55) ~[?:?]
+	at org.apache.flink.streaming.connectors.kafka.internals.AbstractPartitionDiscoverer.open(AbstractPartitionDiscoverer.java:94) ~[?:?]
+	at org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumerBase.open(FlinkKafkaConsumerBase.java:574) ~[?:?]
+	at org.apache.flink.api.common.functions.util.FunctionUtils.openFunction(FunctionUtils.java:34) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.api.operators.AbstractUdfStreamOperator.open(AbstractUdfStreamOperator.java:101) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.RegularOperatorChain.initializeStateAndOpenOperators(RegularOperatorChain.java:107) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restoreGates(StreamTask.java:734) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTaskActionExecutor$SynchronizedStreamTaskActionExecutor.call(StreamTaskActionExecutor.java:100) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restoreInternal(StreamTask.java:709) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restore(StreamTask.java:675) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.taskmanager.Task.runWithSystemExitMonitoring(Task.java:952) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.taskmanager.Task.restoreAndInvoke(Task.java:921) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.taskmanager.Task.doRun(Task.java:745) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.taskmanager.Task.run(Task.java:562) ~[flink-dist-1.17.0.jar:1.17.0]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]
+Caused by: org.apache.kafka.common.config.ConfigException: No resolvable bootstrap urls given in bootstrap.servers
+	at org.apache.kafka.clients.ClientUtils.parseAndValidateAddresses(ClientUtils.java:89) ~[?:?]
+	at org.apache.kafka.clients.ClientUtils.parseAndValidateAddresses(ClientUtils.java:48) ~[?:?]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:732) ~[?:?]
+	... 18 more
+2024-02-16 18:05:19,107 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.DeclarativeSlotManager [] - Clearing resource requirements of job f94e87975c125c52d4c61665811f5095
+2024-02-16 18:05:19,107 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Job Flink Kafka Consumer Example (f94e87975c125c52d4c61665811f5095) switched from state RUNNING to FAILING.
+org.apache.flink.runtime.JobException: Recovery is suppressed by NoRestartBackoffTimeStrategy
+	at org.apache.flink.runtime.executiongraph.failover.flip1.ExecutionFailureHandler.handleFailure(ExecutionFailureHandler.java:139) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.executiongraph.failover.flip1.ExecutionFailureHandler.getFailureHandlingResult(ExecutionFailureHandler.java:83) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.recordTaskFailure(DefaultScheduler.java:258) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.handleTaskFailure(DefaultScheduler.java:249) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.onTaskFailed(DefaultScheduler.java:242) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.SchedulerBase.onTaskExecutionStateUpdate(SchedulerBase.java:748) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.SchedulerBase.updateTaskExecutionState(SchedulerBase.java:725) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.SchedulerNG.updateTaskExecutionState(SchedulerNG.java:80) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.jobmaster.JobMaster.updateTaskExecutionState(JobMaster.java:479) ~[flink-dist-1.17.0.jar:1.17.0]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.lambda$handleRpcInvocation$1(AkkaRpcActor.java:309) ~[flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at org.apache.flink.runtime.concurrent.akka.ClassLoadingUtils.runWithContextClassLoader(ClassLoadingUtils.java:83) ~[flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.handleRpcInvocation(AkkaRpcActor.java:307) ~[flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.handleRpcMessage(AkkaRpcActor.java:222) ~[flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at org.apache.flink.runtime.rpc.akka.FencedAkkaRpcActor.handleRpcMessage(FencedAkkaRpcActor.java:84) ~[flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.handleMessage(AkkaRpcActor.java:168) ~[flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:24) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:20) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at scala.PartialFunction.applyOrElse(PartialFunction.scala:127) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:126) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:20) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:175) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.actor.Actor.aroundReceive(Actor.scala:537) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.actor.Actor.aroundReceive$(Actor.scala:535) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.actor.AbstractActor.aroundReceive(AbstractActor.scala:220) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:579) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.actor.ActorCell.invoke(ActorCell.scala:547) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:270) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.dispatch.Mailbox.run(Mailbox.scala:231) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:243) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290) [?:?]
+	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020) [?:?]
+	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656) [?:?]
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594) [?:?]
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183) [?:?]
+Caused by: org.apache.kafka.common.KafkaException: Failed to construct kafka consumer
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:825) ~[?:?]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:666) ~[?:?]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:647) ~[?:?]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:627) ~[?:?]
+	at org.apache.flink.streaming.connectors.kafka.internals.KafkaPartitionDiscoverer.initializeConnections(KafkaPartitionDiscoverer.java:55) ~[?:?]
+	at org.apache.flink.streaming.connectors.kafka.internals.AbstractPartitionDiscoverer.open(AbstractPartitionDiscoverer.java:94) ~[?:?]
+	at org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumerBase.open(FlinkKafkaConsumerBase.java:574) ~[?:?]
+	at org.apache.flink.api.common.functions.util.FunctionUtils.openFunction(FunctionUtils.java:34) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.api.operators.AbstractUdfStreamOperator.open(AbstractUdfStreamOperator.java:101) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.RegularOperatorChain.initializeStateAndOpenOperators(RegularOperatorChain.java:107) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restoreGates(StreamTask.java:734) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTaskActionExecutor$SynchronizedStreamTaskActionExecutor.call(StreamTaskActionExecutor.java:100) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restoreInternal(StreamTask.java:709) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restore(StreamTask.java:675) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.taskmanager.Task.runWithSystemExitMonitoring(Task.java:952) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.taskmanager.Task.restoreAndInvoke(Task.java:921) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.taskmanager.Task.doRun(Task.java:745) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.taskmanager.Task.run(Task.java:562) ~[flink-dist-1.17.0.jar:1.17.0]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]
+Caused by: org.apache.kafka.common.config.ConfigException: No resolvable bootstrap urls given in bootstrap.servers
+	at org.apache.kafka.clients.ClientUtils.parseAndValidateAddresses(ClientUtils.java:89) ~[?:?]
+	at org.apache.kafka.clients.ClientUtils.parseAndValidateAddresses(ClientUtils.java:48) ~[?:?]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:732) ~[?:?]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:666) ~[?:?]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:647) ~[?:?]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:627) ~[?:?]
+	at org.apache.flink.streaming.connectors.kafka.internals.KafkaPartitionDiscoverer.initializeConnections(KafkaPartitionDiscoverer.java:55) ~[?:?]
+	at org.apache.flink.streaming.connectors.kafka.internals.AbstractPartitionDiscoverer.open(AbstractPartitionDiscoverer.java:94) ~[?:?]
+	at org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumerBase.open(FlinkKafkaConsumerBase.java:574) ~[?:?]
+	at org.apache.flink.api.common.functions.util.FunctionUtils.openFunction(FunctionUtils.java:34) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.api.operators.AbstractUdfStreamOperator.open(AbstractUdfStreamOperator.java:101) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.RegularOperatorChain.initializeStateAndOpenOperators(RegularOperatorChain.java:107) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restoreGates(StreamTask.java:734) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTaskActionExecutor$SynchronizedStreamTaskActionExecutor.call(StreamTaskActionExecutor.java:100) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restoreInternal(StreamTask.java:709) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restore(StreamTask.java:675) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.taskmanager.Task.runWithSystemExitMonitoring(Task.java:952) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.taskmanager.Task.restoreAndInvoke(Task.java:921) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.taskmanager.Task.doRun(Task.java:745) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.taskmanager.Task.run(Task.java:562) ~[flink-dist-1.17.0.jar:1.17.0]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]
+2024-02-16 18:05:19,108 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Job Flink Kafka Consumer Example (f94e87975c125c52d4c61665811f5095) switched from state FAILING to FAILED.
+org.apache.flink.runtime.JobException: Recovery is suppressed by NoRestartBackoffTimeStrategy
+	at org.apache.flink.runtime.executiongraph.failover.flip1.ExecutionFailureHandler.handleFailure(ExecutionFailureHandler.java:139) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.executiongraph.failover.flip1.ExecutionFailureHandler.getFailureHandlingResult(ExecutionFailureHandler.java:83) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.recordTaskFailure(DefaultScheduler.java:258) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.handleTaskFailure(DefaultScheduler.java:249) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.onTaskFailed(DefaultScheduler.java:242) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.SchedulerBase.onTaskExecutionStateUpdate(SchedulerBase.java:748) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.SchedulerBase.updateTaskExecutionState(SchedulerBase.java:725) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.SchedulerNG.updateTaskExecutionState(SchedulerNG.java:80) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.jobmaster.JobMaster.updateTaskExecutionState(JobMaster.java:479) ~[flink-dist-1.17.0.jar:1.17.0]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.lambda$handleRpcInvocation$1(AkkaRpcActor.java:309) ~[flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at org.apache.flink.runtime.concurrent.akka.ClassLoadingUtils.runWithContextClassLoader(ClassLoadingUtils.java:83) ~[flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.handleRpcInvocation(AkkaRpcActor.java:307) ~[flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.handleRpcMessage(AkkaRpcActor.java:222) ~[flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at org.apache.flink.runtime.rpc.akka.FencedAkkaRpcActor.handleRpcMessage(FencedAkkaRpcActor.java:84) ~[flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.handleMessage(AkkaRpcActor.java:168) ~[flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:24) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:20) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at scala.PartialFunction.applyOrElse(PartialFunction.scala:127) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:126) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:20) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:175) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.actor.Actor.aroundReceive(Actor.scala:537) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.actor.Actor.aroundReceive$(Actor.scala:535) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.actor.AbstractActor.aroundReceive(AbstractActor.scala:220) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:579) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.actor.ActorCell.invoke(ActorCell.scala:547) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:270) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.dispatch.Mailbox.run(Mailbox.scala:231) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:243) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290) [?:?]
+	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020) [?:?]
+	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656) [?:?]
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594) [?:?]
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183) [?:?]
+Caused by: org.apache.kafka.common.KafkaException: Failed to construct kafka consumer
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:825) ~[?:?]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:666) ~[?:?]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:647) ~[?:?]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:627) ~[?:?]
+	at org.apache.flink.streaming.connectors.kafka.internals.KafkaPartitionDiscoverer.initializeConnections(KafkaPartitionDiscoverer.java:55) ~[?:?]
+	at org.apache.flink.streaming.connectors.kafka.internals.AbstractPartitionDiscoverer.open(AbstractPartitionDiscoverer.java:94) ~[?:?]
+	at org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumerBase.open(FlinkKafkaConsumerBase.java:574) ~[?:?]
+	at org.apache.flink.api.common.functions.util.FunctionUtils.openFunction(FunctionUtils.java:34) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.api.operators.AbstractUdfStreamOperator.open(AbstractUdfStreamOperator.java:101) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.RegularOperatorChain.initializeStateAndOpenOperators(RegularOperatorChain.java:107) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restoreGates(StreamTask.java:734) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTaskActionExecutor$SynchronizedStreamTaskActionExecutor.call(StreamTaskActionExecutor.java:100) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restoreInternal(StreamTask.java:709) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restore(StreamTask.java:675) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.taskmanager.Task.runWithSystemExitMonitoring(Task.java:952) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.taskmanager.Task.restoreAndInvoke(Task.java:921) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.taskmanager.Task.doRun(Task.java:745) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.taskmanager.Task.run(Task.java:562) ~[flink-dist-1.17.0.jar:1.17.0]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]
+Caused by: org.apache.kafka.common.config.ConfigException: No resolvable bootstrap urls given in bootstrap.servers
+	at org.apache.kafka.clients.ClientUtils.parseAndValidateAddresses(ClientUtils.java:89) ~[?:?]
+	at org.apache.kafka.clients.ClientUtils.parseAndValidateAddresses(ClientUtils.java:48) ~[?:?]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:732) ~[?:?]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:666) ~[?:?]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:647) ~[?:?]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:627) ~[?:?]
+	at org.apache.flink.streaming.connectors.kafka.internals.KafkaPartitionDiscoverer.initializeConnections(KafkaPartitionDiscoverer.java:55) ~[?:?]
+	at org.apache.flink.streaming.connectors.kafka.internals.AbstractPartitionDiscoverer.open(AbstractPartitionDiscoverer.java:94) ~[?:?]
+	at org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumerBase.open(FlinkKafkaConsumerBase.java:574) ~[?:?]
+	at org.apache.flink.api.common.functions.util.FunctionUtils.openFunction(FunctionUtils.java:34) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.api.operators.AbstractUdfStreamOperator.open(AbstractUdfStreamOperator.java:101) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.RegularOperatorChain.initializeStateAndOpenOperators(RegularOperatorChain.java:107) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restoreGates(StreamTask.java:734) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTaskActionExecutor$SynchronizedStreamTaskActionExecutor.call(StreamTaskActionExecutor.java:100) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restoreInternal(StreamTask.java:709) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restore(StreamTask.java:675) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.taskmanager.Task.runWithSystemExitMonitoring(Task.java:952) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.taskmanager.Task.restoreAndInvoke(Task.java:921) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.taskmanager.Task.doRun(Task.java:745) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.taskmanager.Task.run(Task.java:562) ~[flink-dist-1.17.0.jar:1.17.0]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]
+2024-02-16 18:05:19,108 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Stopping checkpoint coordinator for job f94e87975c125c52d4c61665811f5095.
+2024-02-16 18:05:19,109 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Job f94e87975c125c52d4c61665811f5095 reached terminal state FAILED.
+org.apache.flink.runtime.JobException: Recovery is suppressed by NoRestartBackoffTimeStrategy
+	at org.apache.flink.runtime.executiongraph.failover.flip1.ExecutionFailureHandler.handleFailure(ExecutionFailureHandler.java:139)
+	at org.apache.flink.runtime.executiongraph.failover.flip1.ExecutionFailureHandler.getFailureHandlingResult(ExecutionFailureHandler.java:83)
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.recordTaskFailure(DefaultScheduler.java:258)
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.handleTaskFailure(DefaultScheduler.java:249)
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.onTaskFailed(DefaultScheduler.java:242)
+	at org.apache.flink.runtime.scheduler.SchedulerBase.onTaskExecutionStateUpdate(SchedulerBase.java:748)
+	at org.apache.flink.runtime.scheduler.SchedulerBase.updateTaskExecutionState(SchedulerBase.java:725)
+	at org.apache.flink.runtime.scheduler.SchedulerNG.updateTaskExecutionState(SchedulerNG.java:80)
+	at org.apache.flink.runtime.jobmaster.JobMaster.updateTaskExecutionState(JobMaster.java:479)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.lambda$handleRpcInvocation$1(AkkaRpcActor.java:309)
+	at org.apache.flink.runtime.concurrent.akka.ClassLoadingUtils.runWithContextClassLoader(ClassLoadingUtils.java:83)
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.handleRpcInvocation(AkkaRpcActor.java:307)
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.handleRpcMessage(AkkaRpcActor.java:222)
+	at org.apache.flink.runtime.rpc.akka.FencedAkkaRpcActor.handleRpcMessage(FencedAkkaRpcActor.java:84)
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.handleMessage(AkkaRpcActor.java:168)
+	at akka.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:24)
+	at akka.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:20)
+	at scala.PartialFunction.applyOrElse(PartialFunction.scala:127)
+	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:126)
+	at akka.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:20)
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:175)
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176)
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176)
+	at akka.actor.Actor.aroundReceive(Actor.scala:537)
+	at akka.actor.Actor.aroundReceive$(Actor.scala:535)
+	at akka.actor.AbstractActor.aroundReceive(AbstractActor.scala:220)
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:579)
+	at akka.actor.ActorCell.invoke(ActorCell.scala:547)
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:270)
+	at akka.dispatch.Mailbox.run(Mailbox.scala:231)
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:243)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
+Caused by: org.apache.kafka.common.KafkaException: Failed to construct kafka consumer
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:825)
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:666)
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:647)
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:627)
+	at org.apache.flink.streaming.connectors.kafka.internals.KafkaPartitionDiscoverer.initializeConnections(KafkaPartitionDiscoverer.java:55)
+	at org.apache.flink.streaming.connectors.kafka.internals.AbstractPartitionDiscoverer.open(AbstractPartitionDiscoverer.java:94)
+	at org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumerBase.open(FlinkKafkaConsumerBase.java:574)
+	at org.apache.flink.api.common.functions.util.FunctionUtils.openFunction(FunctionUtils.java:34)
+	at org.apache.flink.streaming.api.operators.AbstractUdfStreamOperator.open(AbstractUdfStreamOperator.java:101)
+	at org.apache.flink.streaming.runtime.tasks.RegularOperatorChain.initializeStateAndOpenOperators(RegularOperatorChain.java:107)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restoreGates(StreamTask.java:734)
+	at org.apache.flink.streaming.runtime.tasks.StreamTaskActionExecutor$SynchronizedStreamTaskActionExecutor.call(StreamTaskActionExecutor.java:100)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restoreInternal(StreamTask.java:709)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restore(StreamTask.java:675)
+	at org.apache.flink.runtime.taskmanager.Task.runWithSystemExitMonitoring(Task.java:952)
+	at org.apache.flink.runtime.taskmanager.Task.restoreAndInvoke(Task.java:921)
+	at org.apache.flink.runtime.taskmanager.Task.doRun(Task.java:745)
+	at org.apache.flink.runtime.taskmanager.Task.run(Task.java:562)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.apache.kafka.common.config.ConfigException: No resolvable bootstrap urls given in bootstrap.servers
+	at org.apache.kafka.clients.ClientUtils.parseAndValidateAddresses(ClientUtils.java:89)
+	at org.apache.kafka.clients.ClientUtils.parseAndValidateAddresses(ClientUtils.java:48)
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:732)
+	... 18 more
+2024-02-16 18:05:19,113 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Job f94e87975c125c52d4c61665811f5095 has been registered for cleanup in the JobResultStore after reaching a terminal state.
+2024-02-16 18:05:19,113 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Stopping the JobMaster for job 'Flink Kafka Consumer Example' (f94e87975c125c52d4c61665811f5095).
+2024-02-16 18:05:19,113 INFO  org.apache.flink.runtime.checkpoint.StandaloneCompletedCheckpointStore [] - Shutting down
+2024-02-16 18:05:19,113 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Disconnect TaskExecutor localhost:57128-6336fc because: Stopping JobMaster for job 'Flink Kafka Consumer Example' (f94e87975c125c52d4c61665811f5095).
+2024-02-16 18:05:19,113 INFO  org.apache.flink.runtime.jobmaster.slotpool.DefaultDeclarativeSlotPool [] - Releasing slot [bf566cbd724b8702e2cc41dfaeff0344].
+2024-02-16 18:05:19,113 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Close ResourceManager connection 36f82da4fa08b47717870ea66f066594: Stopping JobMaster for job 'Flink Kafka Consumer Example' (f94e87975c125c52d4c61665811f5095).
+2024-02-16 18:05:19,114 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Disconnect job manager 00000000000000000000000000000000@akka.tcp://flink@localhost:6123/user/rpc/jobmanager_3 for job f94e87975c125c52d4c61665811f5095 from the resource manager.
+2024-02-16 18:08:05,295 WARN  org.apache.flink.runtime.webmonitor.handlers.JarRunHandler   [] - Configuring the job submission via query parameters is deprecated. Please migrate to submitting a JSON request instead.
+2024-02-16 18:08:05,354 INFO  org.apache.flink.client.ClientUtils                          [] - Starting program (detached: true)
+2024-02-16 18:08:05,369 INFO  org.apache.flink.client.deployment.application.executors.EmbeddedExecutor [] - Job aca36592ce20f3bc134c0af18334f5b8 is submitted.
+2024-02-16 18:08:05,370 INFO  org.apache.flink.client.deployment.application.executors.EmbeddedExecutor [] - Submitting Job with JobId=aca36592ce20f3bc134c0af18334f5b8.
+2024-02-16 18:08:05,725 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Received JobGraph submission 'Flink Kafka Consumer Example' (aca36592ce20f3bc134c0af18334f5b8).
+2024-02-16 18:08:05,725 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Submitting job 'Flink Kafka Consumer Example' (aca36592ce20f3bc134c0af18334f5b8).
+2024-02-16 18:08:05,726 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService             [] - Starting RPC endpoint for org.apache.flink.runtime.jobmaster.JobMaster at akka://flink/user/rpc/jobmanager_4 .
+2024-02-16 18:08:05,726 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Initializing job 'Flink Kafka Consumer Example' (aca36592ce20f3bc134c0af18334f5b8).
+2024-02-16 18:08:05,726 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Using restart back off time strategy NoRestartBackoffTimeStrategy for Flink Kafka Consumer Example (aca36592ce20f3bc134c0af18334f5b8).
+2024-02-16 18:08:05,727 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Created execution graph b34593d61cbfb3f8697f48778731d288 for job aca36592ce20f3bc134c0af18334f5b8.
+2024-02-16 18:08:05,727 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Running initialization on master for job Flink Kafka Consumer Example (aca36592ce20f3bc134c0af18334f5b8).
+2024-02-16 18:08:05,727 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Successfully ran initialization on master in 0 ms.
+2024-02-16 18:08:05,727 INFO  org.apache.flink.runtime.scheduler.adapter.DefaultExecutionTopology [] - Built 1 new pipelined regions in 0 ms, total 1 pipelined regions currently.
+2024-02-16 18:08:05,727 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - No state backend has been configured, using default (HashMap) org.apache.flink.runtime.state.hashmap.HashMapStateBackend@375a5772
+2024-02-16 18:08:05,727 INFO  org.apache.flink.runtime.state.StateBackendLoader            [] - State backend loader loads the state backend as HashMapStateBackend
+2024-02-16 18:08:05,727 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Checkpoint storage is set to 'jobmanager'
+2024-02-16 18:08:05,727 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - No checkpoint found during restore.
+2024-02-16 18:08:05,727 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Using failover strategy org.apache.flink.runtime.executiongraph.failover.flip1.RestartPipelinedRegionFailoverStrategy@9f48e57 for Flink Kafka Consumer Example (aca36592ce20f3bc134c0af18334f5b8).
+2024-02-16 18:08:05,728 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Starting execution of job 'Flink Kafka Consumer Example' (aca36592ce20f3bc134c0af18334f5b8) under job master id 00000000000000000000000000000000.
+2024-02-16 18:08:05,728 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Starting scheduling with scheduling strategy [org.apache.flink.runtime.scheduler.strategy.PipelinedRegionSchedulingStrategy]
+2024-02-16 18:08:05,728 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Job Flink Kafka Consumer Example (aca36592ce20f3bc134c0af18334f5b8) switched from state CREATED to RUNNING.
+2024-02-16 18:08:05,728 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Custom Source -> Sink: Print to Std. Out (1/1) (b34593d61cbfb3f8697f48778731d288_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from CREATED to SCHEDULED.
+2024-02-16 18:08:05,728 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Connecting to ResourceManager akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*(00000000000000000000000000000000)
+2024-02-16 18:08:05,729 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Resolved ResourceManager address, beginning registration
+2024-02-16 18:08:05,729 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Registering job manager 00000000000000000000000000000000@akka.tcp://flink@localhost:6123/user/rpc/jobmanager_4 for job aca36592ce20f3bc134c0af18334f5b8.
+2024-02-16 18:08:05,729 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Registered job manager 00000000000000000000000000000000@akka.tcp://flink@localhost:6123/user/rpc/jobmanager_4 for job aca36592ce20f3bc134c0af18334f5b8.
+2024-02-16 18:08:05,729 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - JobManager successfully registered at ResourceManager, leader id: 00000000000000000000000000000000.
+2024-02-16 18:08:05,729 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.DeclarativeSlotManager [] - Received resource requirements from job aca36592ce20f3bc134c0af18334f5b8: [ResourceRequirement{resourceProfile=ResourceProfile{UNKNOWN}, numberOfRequiredSlots=1}]
+2024-02-16 18:08:05,802 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Custom Source -> Sink: Print to Std. Out (1/1) (b34593d61cbfb3f8697f48778731d288_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from SCHEDULED to DEPLOYING.
+2024-02-16 18:08:05,803 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Deploying Source: Custom Source -> Sink: Print to Std. Out (1/1) (attempt #0) with attempt id b34593d61cbfb3f8697f48778731d288_cbc357ccb763df2852fee8c4fc7d55f2_0_0 and vertex id cbc357ccb763df2852fee8c4fc7d55f2_0 to localhost:57128-6336fc @ localhost (dataPort=57137) with allocation id 1a220f3e22806acaf62e8d2cdf7aeff2
+2024-02-16 18:08:06,146 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Custom Source -> Sink: Print to Std. Out (1/1) (b34593d61cbfb3f8697f48778731d288_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from DEPLOYING to INITIALIZING.
+2024-02-16 18:08:06,339 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Custom Source -> Sink: Print to Std. Out (1/1) (b34593d61cbfb3f8697f48778731d288_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from INITIALIZING to RUNNING.
+2024-02-16 18:30:44,497 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Job Flink Kafka Consumer Example (aca36592ce20f3bc134c0af18334f5b8) switched from state RUNNING to CANCELLING.
+2024-02-16 18:30:44,497 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Custom Source -> Sink: Print to Std. Out (1/1) (b34593d61cbfb3f8697f48778731d288_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from RUNNING to CANCELING.
+2024-02-16 18:30:44,527 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Custom Source -> Sink: Print to Std. Out (1/1) (b34593d61cbfb3f8697f48778731d288_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from CANCELING to CANCELED.
+2024-02-16 18:30:44,527 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Job Flink Kafka Consumer Example (aca36592ce20f3bc134c0af18334f5b8) switched from state CANCELLING to CANCELED.
+2024-02-16 18:30:44,527 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.DeclarativeSlotManager [] - Clearing resource requirements of job aca36592ce20f3bc134c0af18334f5b8
+2024-02-16 18:30:44,527 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Stopping checkpoint coordinator for job aca36592ce20f3bc134c0af18334f5b8.
+2024-02-16 18:30:44,528 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Job aca36592ce20f3bc134c0af18334f5b8 reached terminal state CANCELED.
+2024-02-16 18:30:44,530 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Job aca36592ce20f3bc134c0af18334f5b8 has been registered for cleanup in the JobResultStore after reaching a terminal state.
+2024-02-16 18:30:44,530 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Stopping the JobMaster for job 'Flink Kafka Consumer Example' (aca36592ce20f3bc134c0af18334f5b8).
+2024-02-16 18:30:44,531 INFO  org.apache.flink.runtime.checkpoint.StandaloneCompletedCheckpointStore [] - Shutting down
+2024-02-16 18:30:44,531 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Disconnect TaskExecutor localhost:57128-6336fc because: Stopping JobMaster for job 'Flink Kafka Consumer Example' (aca36592ce20f3bc134c0af18334f5b8).
+2024-02-16 18:30:44,531 INFO  org.apache.flink.runtime.jobmaster.slotpool.DefaultDeclarativeSlotPool [] - Releasing slot [1a220f3e22806acaf62e8d2cdf7aeff2].
+2024-02-16 18:30:44,531 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Close ResourceManager connection 36f82da4fa08b47717870ea66f066594: Stopping JobMaster for job 'Flink Kafka Consumer Example' (aca36592ce20f3bc134c0af18334f5b8).
+2024-02-16 18:30:44,531 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Disconnect job manager 00000000000000000000000000000000@akka.tcp://flink@localhost:6123/user/rpc/jobmanager_4 for job aca36592ce20f3bc134c0af18334f5b8 from the resource manager.
+2024-02-16 22:33:13,068 ERROR org.apache.flink.runtime.rest.handler.job.JobDetailsHandler  [] - Exception occurred in REST handler: Job aca36592ce20f3bc134c0af18334f5b8 not found
+2024-02-16 22:33:13,089 ERROR org.apache.flink.runtime.rest.handler.job.JobExceptionsHandler [] - Exception occurred in REST handler: Job aca36592ce20f3bc134c0af18334f5b8 not found
+2024-02-16 22:33:16,061 ERROR org.apache.flink.runtime.rest.handler.job.JobDetailsHandler  [] - Exception occurred in REST handler: Job aca36592ce20f3bc134c0af18334f5b8 not found
+2024-02-16 22:33:16,071 ERROR org.apache.flink.runtime.rest.handler.job.JobExceptionsHandler [] - Exception occurred in REST handler: Job aca36592ce20f3bc134c0af18334f5b8 not found
+2024-02-16 22:33:19,060 ERROR org.apache.flink.runtime.rest.handler.job.JobDetailsHandler  [] - Exception occurred in REST handler: Job aca36592ce20f3bc134c0af18334f5b8 not found
+2024-02-16 22:33:19,069 ERROR org.apache.flink.runtime.rest.handler.job.JobExceptionsHandler [] - Exception occurred in REST handler: Job aca36592ce20f3bc134c0af18334f5b8 not found
+2024-02-16 22:33:22,058 ERROR org.apache.flink.runtime.rest.handler.job.JobDetailsHandler  [] - Exception occurred in REST handler: Job aca36592ce20f3bc134c0af18334f5b8 not found
+2024-02-16 22:33:22,065 ERROR org.apache.flink.runtime.rest.handler.job.JobExceptionsHandler [] - Exception occurred in REST handler: Job aca36592ce20f3bc134c0af18334f5b8 not found
+2024-02-16 22:33:25,058 ERROR org.apache.flink.runtime.rest.handler.job.JobDetailsHandler  [] - Exception occurred in REST handler: Job aca36592ce20f3bc134c0af18334f5b8 not found
+2024-02-16 22:33:25,066 ERROR org.apache.flink.runtime.rest.handler.job.JobExceptionsHandler [] - Exception occurred in REST handler: Job aca36592ce20f3bc134c0af18334f5b8 not found
+2024-02-16 22:36:56,502 WARN  org.apache.flink.runtime.webmonitor.handlers.JarRunHandler   [] - Configuring the job submission via query parameters is deprecated. Please migrate to submitting a JSON request instead.
+2024-02-16 22:36:56,549 INFO  org.apache.flink.client.ClientUtils                          [] - Starting program (detached: true)
+2024-02-16 22:36:56,566 INFO  org.apache.flink.client.deployment.application.executors.EmbeddedExecutor [] - Job 84477bc41321b752cc1682f58d78967f is submitted.
+2024-02-16 22:36:56,567 INFO  org.apache.flink.client.deployment.application.executors.EmbeddedExecutor [] - Submitting Job with JobId=84477bc41321b752cc1682f58d78967f.
+2024-02-16 22:36:56,940 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Received JobGraph submission 'run price consumer' (84477bc41321b752cc1682f58d78967f).
+2024-02-16 22:36:56,941 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Submitting job 'run price consumer' (84477bc41321b752cc1682f58d78967f).
+2024-02-16 22:36:56,941 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService             [] - Starting RPC endpoint for org.apache.flink.runtime.jobmaster.JobMaster at akka://flink/user/rpc/jobmanager_5 .
+2024-02-16 22:36:56,942 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Initializing job 'run price consumer' (84477bc41321b752cc1682f58d78967f).
+2024-02-16 22:36:56,942 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Using restart back off time strategy NoRestartBackoffTimeStrategy for run price consumer (84477bc41321b752cc1682f58d78967f).
+2024-02-16 22:36:56,942 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Created execution graph 7b50f441653adc0dcd409f8c938d929a for job 84477bc41321b752cc1682f58d78967f.
+2024-02-16 22:36:56,942 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Running initialization on master for job run price consumer (84477bc41321b752cc1682f58d78967f).
+2024-02-16 22:36:56,943 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Successfully ran initialization on master in 0 ms.
+2024-02-16 22:36:56,946 INFO  org.apache.flink.runtime.scheduler.adapter.DefaultExecutionTopology [] - Built 1 new pipelined regions in 0 ms, total 1 pipelined regions currently.
+2024-02-16 22:36:56,946 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - No state backend has been configured, using default (HashMap) org.apache.flink.runtime.state.hashmap.HashMapStateBackend@7f17bed7
+2024-02-16 22:36:56,946 INFO  org.apache.flink.runtime.state.StateBackendLoader            [] - State backend loader loads the state backend as HashMapStateBackend
+2024-02-16 22:36:56,946 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Checkpoint storage is set to 'jobmanager'
+2024-02-16 22:36:56,946 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - No checkpoint found during restore.
+2024-02-16 22:36:56,946 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Using failover strategy org.apache.flink.runtime.executiongraph.failover.flip1.RestartPipelinedRegionFailoverStrategy@3a3e8e3c for run price consumer (84477bc41321b752cc1682f58d78967f).
+2024-02-16 22:36:56,946 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Starting execution of job 'run price consumer' (84477bc41321b752cc1682f58d78967f) under job master id 00000000000000000000000000000000.
+2024-02-16 22:36:56,947 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Starting scheduling with scheduling strategy [org.apache.flink.runtime.scheduler.strategy.PipelinedRegionSchedulingStrategy]
+2024-02-16 22:36:56,947 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Job run price consumer (84477bc41321b752cc1682f58d78967f) switched from state CREATED to RUNNING.
+2024-02-16 22:36:56,947 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Custom Source (1/3) (7b50f441653adc0dcd409f8c938d929a_bc764cd8ddf7a0cff126f51c16239658_0_0) switched from CREATED to SCHEDULED.
+2024-02-16 22:36:56,947 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Custom Source (2/3) (7b50f441653adc0dcd409f8c938d929a_bc764cd8ddf7a0cff126f51c16239658_1_0) switched from CREATED to SCHEDULED.
+2024-02-16 22:36:56,947 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Custom Source (3/3) (7b50f441653adc0dcd409f8c938d929a_bc764cd8ddf7a0cff126f51c16239658_2_0) switched from CREATED to SCHEDULED.
+2024-02-16 22:36:56,947 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Sink: Print to Std. Out (1/2) (7b50f441653adc0dcd409f8c938d929a_0a448493b4782967b150582570326227_0_0) switched from CREATED to SCHEDULED.
+2024-02-16 22:36:56,947 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Sink: Print to Std. Out (2/2) (7b50f441653adc0dcd409f8c938d929a_0a448493b4782967b150582570326227_1_0) switched from CREATED to SCHEDULED.
+2024-02-16 22:36:56,947 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Connecting to ResourceManager akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*(00000000000000000000000000000000)
+2024-02-16 22:36:56,948 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Resolved ResourceManager address, beginning registration
+2024-02-16 22:36:56,948 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Registering job manager 00000000000000000000000000000000@akka.tcp://flink@localhost:6123/user/rpc/jobmanager_5 for job 84477bc41321b752cc1682f58d78967f.
+2024-02-16 22:36:56,948 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Registered job manager 00000000000000000000000000000000@akka.tcp://flink@localhost:6123/user/rpc/jobmanager_5 for job 84477bc41321b752cc1682f58d78967f.
+2024-02-16 22:36:56,948 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - JobManager successfully registered at ResourceManager, leader id: 00000000000000000000000000000000.
+2024-02-16 22:36:56,949 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.DeclarativeSlotManager [] - Received resource requirements from job 84477bc41321b752cc1682f58d78967f: [ResourceRequirement{resourceProfile=ResourceProfile{UNKNOWN}, numberOfRequiredSlots=3}]
+2024-02-16 22:36:57,014 WARN  org.apache.flink.runtime.resourcemanager.slotmanager.DeclarativeSlotManager [] - Could not fulfill resource requirements of job 84477bc41321b752cc1682f58d78967f. Free slots: 0
+2024-02-16 22:36:57,015 WARN  org.apache.flink.runtime.jobmaster.slotpool.DeclarativeSlotPoolBridge [] - Could not acquire the minimum required resources, failing slot requests. Acquired: [ResourceRequirement{resourceProfile=ResourceProfile{cpuCores=1, taskHeapMemory=384.000mb (402653174 bytes), taskOffHeapMemory=0 bytes, managedMemory=512.000mb (536870920 bytes), networkMemory=128.000mb (134217730 bytes)}, numberOfRequiredSlots=1}]. Current slot pool status: Registered TMs: 0, registered slots: 0 free slots: 0
+2024-02-16 22:36:57,016 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Custom Source (3/3) (7b50f441653adc0dcd409f8c938d929a_bc764cd8ddf7a0cff126f51c16239658_2_0) switched from SCHEDULED to FAILED on [unassigned resource].
+org.apache.flink.runtime.jobmanager.scheduler.NoResourceAvailableException: Could not acquire the minimum required resources.
+2024-02-16 22:36:57,016 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Discarding the results produced by task execution 7b50f441653adc0dcd409f8c938d929a_bc764cd8ddf7a0cff126f51c16239658_2_0.
+2024-02-16 22:36:57,017 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Job run price consumer (84477bc41321b752cc1682f58d78967f) switched from state RUNNING to FAILING.
+org.apache.flink.runtime.JobException: Recovery is suppressed by NoRestartBackoffTimeStrategy
+	at org.apache.flink.runtime.executiongraph.failover.flip1.ExecutionFailureHandler.handleFailure(ExecutionFailureHandler.java:139) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.executiongraph.failover.flip1.ExecutionFailureHandler.getFailureHandlingResult(ExecutionFailureHandler.java:83) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.recordTaskFailure(DefaultScheduler.java:258) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.handleTaskFailure(DefaultScheduler.java:249) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.onTaskFailed(DefaultScheduler.java:242) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.SchedulerBase.onTaskExecutionStateUpdate(SchedulerBase.java:748) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.SchedulerBase.updateTaskExecutionState(SchedulerBase.java:725) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.UpdateSchedulerNgOnInternalFailuresListener.notifyTaskFailure(UpdateSchedulerNgOnInternalFailuresListener.java:51) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.executiongraph.DefaultExecutionGraph.notifySchedulerNgAboutInternalTaskFailure(DefaultExecutionGraph.java:1664) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.executiongraph.Execution.processFail(Execution.java:1140) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.executiongraph.Execution.processFail(Execution.java:1080) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.executiongraph.Execution.markFailed(Execution.java:919) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.DefaultExecutionOperations.markFailed(DefaultExecutionOperations.java:43) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.DefaultExecutionDeployer.handleTaskDeploymentFailure(DefaultExecutionDeployer.java:327) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.DefaultExecutionDeployer.lambda$assignAllResourcesAndRegisterProducedPartitions$2(DefaultExecutionDeployer.java:170) ~[flink-dist-1.17.0.jar:1.17.0]
+	at java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:930) ~[?:?]
+	at java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:907) ~[?:?]
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506) ~[?:?]
+	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2094) ~[?:?]
+	at org.apache.flink.runtime.jobmaster.slotpool.PendingRequest.failRequest(PendingRequest.java:88) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.jobmaster.slotpool.DeclarativeSlotPoolBridge.cancelPendingRequests(DeclarativeSlotPoolBridge.java:185) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.jobmaster.slotpool.DeclarativeSlotPoolBridge.failPendingRequests(DeclarativeSlotPoolBridge.java:408) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.jobmaster.slotpool.DeclarativeSlotPoolBridge.notifyNotEnoughResourcesAvailable(DeclarativeSlotPoolBridge.java:396) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.jobmaster.JobMaster.notifyNotEnoughResourcesAvailable(JobMaster.java:887) ~[flink-dist-1.17.0.jar:1.17.0]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.lambda$handleRpcInvocation$0(AkkaRpcActor.java:301) ~[flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at org.apache.flink.runtime.concurrent.akka.ClassLoadingUtils.runWithContextClassLoader(ClassLoadingUtils.java:83) ~[flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.handleRpcInvocation(AkkaRpcActor.java:300) ~[flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.handleRpcMessage(AkkaRpcActor.java:222) ~[flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at org.apache.flink.runtime.rpc.akka.FencedAkkaRpcActor.handleRpcMessage(FencedAkkaRpcActor.java:84) ~[flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.handleMessage(AkkaRpcActor.java:168) ~[flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:24) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:20) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at scala.PartialFunction.applyOrElse(PartialFunction.scala:127) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:126) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:20) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:175) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.actor.Actor.aroundReceive(Actor.scala:537) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.actor.Actor.aroundReceive$(Actor.scala:535) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.actor.AbstractActor.aroundReceive(AbstractActor.scala:220) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:579) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.actor.ActorCell.invoke(ActorCell.scala:547) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:270) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.dispatch.Mailbox.run(Mailbox.scala:231) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:243) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290) [?:?]
+	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020) [?:?]
+	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656) [?:?]
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594) [?:?]
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183) [?:?]
+Caused by: java.util.concurrent.CompletionException: java.util.concurrent.CompletionException: org.apache.flink.runtime.jobmanager.scheduler.NoResourceAvailableException: Could not acquire the minimum required resources.
+	at org.apache.flink.runtime.scheduler.DefaultExecutionDeployer.lambda$assignResource$4(DefaultExecutionDeployer.java:227) ~[flink-dist-1.17.0.jar:1.17.0]
+	... 40 more
+Caused by: java.util.concurrent.CompletionException: org.apache.flink.runtime.jobmanager.scheduler.NoResourceAvailableException: Could not acquire the minimum required resources.
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331) ~[?:?]
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346) ~[?:?]
+	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:632) ~[?:?]
+	... 38 more
+Caused by: org.apache.flink.runtime.jobmanager.scheduler.NoResourceAvailableException: Could not acquire the minimum required resources.
+2024-02-16 22:36:57,018 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Custom Source (1/3) (7b50f441653adc0dcd409f8c938d929a_bc764cd8ddf7a0cff126f51c16239658_0_0) switched from SCHEDULED to CANCELING.
+2024-02-16 22:36:57,018 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Custom Source (1/3) (7b50f441653adc0dcd409f8c938d929a_bc764cd8ddf7a0cff126f51c16239658_0_0) switched from CANCELING to CANCELED.
+2024-02-16 22:36:57,018 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Discarding the results produced by task execution 7b50f441653adc0dcd409f8c938d929a_bc764cd8ddf7a0cff126f51c16239658_0_0.
+2024-02-16 22:36:57,018 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Custom Source (2/3) (7b50f441653adc0dcd409f8c938d929a_bc764cd8ddf7a0cff126f51c16239658_1_0) switched from SCHEDULED to CANCELING.
+2024-02-16 22:36:57,018 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Custom Source (2/3) (7b50f441653adc0dcd409f8c938d929a_bc764cd8ddf7a0cff126f51c16239658_1_0) switched from CANCELING to CANCELED.
+2024-02-16 22:36:57,018 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Discarding the results produced by task execution 7b50f441653adc0dcd409f8c938d929a_bc764cd8ddf7a0cff126f51c16239658_1_0.
+2024-02-16 22:36:57,018 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Sink: Print to Std. Out (1/2) (7b50f441653adc0dcd409f8c938d929a_0a448493b4782967b150582570326227_0_0) switched from SCHEDULED to CANCELING.
+2024-02-16 22:36:57,018 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Sink: Print to Std. Out (1/2) (7b50f441653adc0dcd409f8c938d929a_0a448493b4782967b150582570326227_0_0) switched from CANCELING to CANCELED.
+2024-02-16 22:36:57,018 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Discarding the results produced by task execution 7b50f441653adc0dcd409f8c938d929a_0a448493b4782967b150582570326227_0_0.
+2024-02-16 22:36:57,018 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Sink: Print to Std. Out (2/2) (7b50f441653adc0dcd409f8c938d929a_0a448493b4782967b150582570326227_1_0) switched from SCHEDULED to CANCELING.
+2024-02-16 22:36:57,018 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Sink: Print to Std. Out (2/2) (7b50f441653adc0dcd409f8c938d929a_0a448493b4782967b150582570326227_1_0) switched from CANCELING to CANCELED.
+2024-02-16 22:36:57,018 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Discarding the results produced by task execution 7b50f441653adc0dcd409f8c938d929a_0a448493b4782967b150582570326227_1_0.
+2024-02-16 22:36:57,018 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Job run price consumer (84477bc41321b752cc1682f58d78967f) switched from state FAILING to FAILED.
+org.apache.flink.runtime.JobException: Recovery is suppressed by NoRestartBackoffTimeStrategy
+	at org.apache.flink.runtime.executiongraph.failover.flip1.ExecutionFailureHandler.handleFailure(ExecutionFailureHandler.java:139) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.executiongraph.failover.flip1.ExecutionFailureHandler.getFailureHandlingResult(ExecutionFailureHandler.java:83) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.recordTaskFailure(DefaultScheduler.java:258) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.handleTaskFailure(DefaultScheduler.java:249) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.onTaskFailed(DefaultScheduler.java:242) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.SchedulerBase.onTaskExecutionStateUpdate(SchedulerBase.java:748) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.SchedulerBase.updateTaskExecutionState(SchedulerBase.java:725) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.UpdateSchedulerNgOnInternalFailuresListener.notifyTaskFailure(UpdateSchedulerNgOnInternalFailuresListener.java:51) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.executiongraph.DefaultExecutionGraph.notifySchedulerNgAboutInternalTaskFailure(DefaultExecutionGraph.java:1664) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.executiongraph.Execution.processFail(Execution.java:1140) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.executiongraph.Execution.processFail(Execution.java:1080) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.executiongraph.Execution.markFailed(Execution.java:919) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.DefaultExecutionOperations.markFailed(DefaultExecutionOperations.java:43) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.DefaultExecutionDeployer.handleTaskDeploymentFailure(DefaultExecutionDeployer.java:327) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.DefaultExecutionDeployer.lambda$assignAllResourcesAndRegisterProducedPartitions$2(DefaultExecutionDeployer.java:170) ~[flink-dist-1.17.0.jar:1.17.0]
+	at java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:930) ~[?:?]
+	at java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:907) ~[?:?]
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506) ~[?:?]
+	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2094) ~[?:?]
+	at org.apache.flink.runtime.jobmaster.slotpool.PendingRequest.failRequest(PendingRequest.java:88) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.jobmaster.slotpool.DeclarativeSlotPoolBridge.cancelPendingRequests(DeclarativeSlotPoolBridge.java:185) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.jobmaster.slotpool.DeclarativeSlotPoolBridge.failPendingRequests(DeclarativeSlotPoolBridge.java:408) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.jobmaster.slotpool.DeclarativeSlotPoolBridge.notifyNotEnoughResourcesAvailable(DeclarativeSlotPoolBridge.java:396) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.jobmaster.JobMaster.notifyNotEnoughResourcesAvailable(JobMaster.java:887) ~[flink-dist-1.17.0.jar:1.17.0]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.lambda$handleRpcInvocation$0(AkkaRpcActor.java:301) ~[flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at org.apache.flink.runtime.concurrent.akka.ClassLoadingUtils.runWithContextClassLoader(ClassLoadingUtils.java:83) ~[flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.handleRpcInvocation(AkkaRpcActor.java:300) ~[flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.handleRpcMessage(AkkaRpcActor.java:222) ~[flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at org.apache.flink.runtime.rpc.akka.FencedAkkaRpcActor.handleRpcMessage(FencedAkkaRpcActor.java:84) ~[flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.handleMessage(AkkaRpcActor.java:168) ~[flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:24) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:20) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at scala.PartialFunction.applyOrElse(PartialFunction.scala:127) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:126) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:20) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:175) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.actor.Actor.aroundReceive(Actor.scala:537) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.actor.Actor.aroundReceive$(Actor.scala:535) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.actor.AbstractActor.aroundReceive(AbstractActor.scala:220) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:579) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.actor.ActorCell.invoke(ActorCell.scala:547) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:270) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.dispatch.Mailbox.run(Mailbox.scala:231) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:243) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290) [?:?]
+	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020) [?:?]
+	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656) [?:?]
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594) [?:?]
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183) [?:?]
+Caused by: java.util.concurrent.CompletionException: java.util.concurrent.CompletionException: org.apache.flink.runtime.jobmanager.scheduler.NoResourceAvailableException: Could not acquire the minimum required resources.
+	at org.apache.flink.runtime.scheduler.DefaultExecutionDeployer.lambda$assignResource$4(DefaultExecutionDeployer.java:227) ~[flink-dist-1.17.0.jar:1.17.0]
+	... 40 more
+Caused by: java.util.concurrent.CompletionException: org.apache.flink.runtime.jobmanager.scheduler.NoResourceAvailableException: Could not acquire the minimum required resources.
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331) ~[?:?]
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346) ~[?:?]
+	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:632) ~[?:?]
+	... 38 more
+Caused by: org.apache.flink.runtime.jobmanager.scheduler.NoResourceAvailableException: Could not acquire the minimum required resources.
+2024-02-16 22:36:57,018 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Stopping checkpoint coordinator for job 84477bc41321b752cc1682f58d78967f.
+2024-02-16 22:36:57,019 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.DeclarativeSlotManager [] - Clearing resource requirements of job 84477bc41321b752cc1682f58d78967f
+2024-02-16 22:36:57,019 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Job 84477bc41321b752cc1682f58d78967f reached terminal state FAILED.
+org.apache.flink.runtime.JobException: Recovery is suppressed by NoRestartBackoffTimeStrategy
+	at org.apache.flink.runtime.executiongraph.failover.flip1.ExecutionFailureHandler.handleFailure(ExecutionFailureHandler.java:139)
+	at org.apache.flink.runtime.executiongraph.failover.flip1.ExecutionFailureHandler.getFailureHandlingResult(ExecutionFailureHandler.java:83)
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.recordTaskFailure(DefaultScheduler.java:258)
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.handleTaskFailure(DefaultScheduler.java:249)
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.onTaskFailed(DefaultScheduler.java:242)
+	at org.apache.flink.runtime.scheduler.SchedulerBase.onTaskExecutionStateUpdate(SchedulerBase.java:748)
+	at org.apache.flink.runtime.scheduler.SchedulerBase.updateTaskExecutionState(SchedulerBase.java:725)
+	at org.apache.flink.runtime.scheduler.UpdateSchedulerNgOnInternalFailuresListener.notifyTaskFailure(UpdateSchedulerNgOnInternalFailuresListener.java:51)
+	at org.apache.flink.runtime.executiongraph.DefaultExecutionGraph.notifySchedulerNgAboutInternalTaskFailure(DefaultExecutionGraph.java:1664)
+	at org.apache.flink.runtime.executiongraph.Execution.processFail(Execution.java:1140)
+	at org.apache.flink.runtime.executiongraph.Execution.processFail(Execution.java:1080)
+	at org.apache.flink.runtime.executiongraph.Execution.markFailed(Execution.java:919)
+	at org.apache.flink.runtime.scheduler.DefaultExecutionOperations.markFailed(DefaultExecutionOperations.java:43)
+	at org.apache.flink.runtime.scheduler.DefaultExecutionDeployer.handleTaskDeploymentFailure(DefaultExecutionDeployer.java:327)
+	at org.apache.flink.runtime.scheduler.DefaultExecutionDeployer.lambda$assignAllResourcesAndRegisterProducedPartitions$2(DefaultExecutionDeployer.java:170)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:930)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:907)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2094)
+	at org.apache.flink.runtime.jobmaster.slotpool.PendingRequest.failRequest(PendingRequest.java:88)
+	at org.apache.flink.runtime.jobmaster.slotpool.DeclarativeSlotPoolBridge.cancelPendingRequests(DeclarativeSlotPoolBridge.java:185)
+	at org.apache.flink.runtime.jobmaster.slotpool.DeclarativeSlotPoolBridge.failPendingRequests(DeclarativeSlotPoolBridge.java:408)
+	at org.apache.flink.runtime.jobmaster.slotpool.DeclarativeSlotPoolBridge.notifyNotEnoughResourcesAvailable(DeclarativeSlotPoolBridge.java:396)
+	at org.apache.flink.runtime.jobmaster.JobMaster.notifyNotEnoughResourcesAvailable(JobMaster.java:887)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.lambda$handleRpcInvocation$0(AkkaRpcActor.java:301)
+	at org.apache.flink.runtime.concurrent.akka.ClassLoadingUtils.runWithContextClassLoader(ClassLoadingUtils.java:83)
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.handleRpcInvocation(AkkaRpcActor.java:300)
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.handleRpcMessage(AkkaRpcActor.java:222)
+	at org.apache.flink.runtime.rpc.akka.FencedAkkaRpcActor.handleRpcMessage(FencedAkkaRpcActor.java:84)
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.handleMessage(AkkaRpcActor.java:168)
+	at akka.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:24)
+	at akka.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:20)
+	at scala.PartialFunction.applyOrElse(PartialFunction.scala:127)
+	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:126)
+	at akka.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:20)
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:175)
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176)
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176)
+	at akka.actor.Actor.aroundReceive(Actor.scala:537)
+	at akka.actor.Actor.aroundReceive$(Actor.scala:535)
+	at akka.actor.AbstractActor.aroundReceive(AbstractActor.scala:220)
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:579)
+	at akka.actor.ActorCell.invoke(ActorCell.scala:547)
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:270)
+	at akka.dispatch.Mailbox.run(Mailbox.scala:231)
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:243)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
+Caused by: java.util.concurrent.CompletionException: java.util.concurrent.CompletionException: org.apache.flink.runtime.jobmanager.scheduler.NoResourceAvailableException: Could not acquire the minimum required resources.
+	at org.apache.flink.runtime.scheduler.DefaultExecutionDeployer.lambda$assignResource$4(DefaultExecutionDeployer.java:227)
+	... 40 more
+Caused by: java.util.concurrent.CompletionException: org.apache.flink.runtime.jobmanager.scheduler.NoResourceAvailableException: Could not acquire the minimum required resources.
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:632)
+	... 38 more
+Caused by: org.apache.flink.runtime.jobmanager.scheduler.NoResourceAvailableException: Could not acquire the minimum required resources.
+2024-02-16 22:36:57,025 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Job 84477bc41321b752cc1682f58d78967f has been registered for cleanup in the JobResultStore after reaching a terminal state.
+2024-02-16 22:36:57,025 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Stopping the JobMaster for job 'run price consumer' (84477bc41321b752cc1682f58d78967f).
+2024-02-16 22:36:57,026 INFO  org.apache.flink.runtime.checkpoint.StandaloneCompletedCheckpointStore [] - Shutting down
+2024-02-16 22:36:57,026 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Disconnect TaskExecutor localhost:57128-6336fc because: Stopping JobMaster for job 'run price consumer' (84477bc41321b752cc1682f58d78967f).
+2024-02-16 22:36:57,026 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Close ResourceManager connection 36f82da4fa08b47717870ea66f066594: Stopping JobMaster for job 'run price consumer' (84477bc41321b752cc1682f58d78967f).
+2024-02-16 22:36:57,026 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Disconnect job manager 00000000000000000000000000000000@akka.tcp://flink@localhost:6123/user/rpc/jobmanager_5 for job 84477bc41321b752cc1682f58d78967f from the resource manager.
+2024-02-16 22:37:35,479 WARN  org.apache.flink.runtime.webmonitor.handlers.JarRunHandler   [] - Configuring the job submission via query parameters is deprecated. Please migrate to submitting a JSON request instead.
+2024-02-16 22:37:35,496 INFO  org.apache.flink.client.ClientUtils                          [] - Starting program (detached: true)
+2024-02-16 22:37:35,517 INFO  org.apache.flink.client.deployment.application.executors.EmbeddedExecutor [] - Job efa27fe07e6d329a41c772efb1370670 is submitted.
+2024-02-16 22:37:35,517 INFO  org.apache.flink.client.deployment.application.executors.EmbeddedExecutor [] - Submitting Job with JobId=efa27fe07e6d329a41c772efb1370670.
+2024-02-16 22:37:35,875 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Received JobGraph submission 'run price consumer' (efa27fe07e6d329a41c772efb1370670).
+2024-02-16 22:37:35,875 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Submitting job 'run price consumer' (efa27fe07e6d329a41c772efb1370670).
+2024-02-16 22:37:35,876 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService             [] - Starting RPC endpoint for org.apache.flink.runtime.jobmaster.JobMaster at akka://flink/user/rpc/jobmanager_6 .
+2024-02-16 22:37:35,876 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Initializing job 'run price consumer' (efa27fe07e6d329a41c772efb1370670).
+2024-02-16 22:37:35,877 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Using restart back off time strategy NoRestartBackoffTimeStrategy for run price consumer (efa27fe07e6d329a41c772efb1370670).
+2024-02-16 22:37:35,877 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Created execution graph 1dbe2aa5ff11fe1350d0cd6f3a390764 for job efa27fe07e6d329a41c772efb1370670.
+2024-02-16 22:37:35,877 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Running initialization on master for job run price consumer (efa27fe07e6d329a41c772efb1370670).
+2024-02-16 22:37:35,877 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Successfully ran initialization on master in 0 ms.
+2024-02-16 22:37:35,877 INFO  org.apache.flink.runtime.scheduler.adapter.DefaultExecutionTopology [] - Built 1 new pipelined regions in 0 ms, total 1 pipelined regions currently.
+2024-02-16 22:37:35,877 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - No state backend has been configured, using default (HashMap) org.apache.flink.runtime.state.hashmap.HashMapStateBackend@79d2736
+2024-02-16 22:37:35,877 INFO  org.apache.flink.runtime.state.StateBackendLoader            [] - State backend loader loads the state backend as HashMapStateBackend
+2024-02-16 22:37:35,877 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Checkpoint storage is set to 'jobmanager'
+2024-02-16 22:37:35,878 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - No checkpoint found during restore.
+2024-02-16 22:37:35,878 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Using failover strategy org.apache.flink.runtime.executiongraph.failover.flip1.RestartPipelinedRegionFailoverStrategy@350826fc for run price consumer (efa27fe07e6d329a41c772efb1370670).
+2024-02-16 22:37:35,878 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Starting execution of job 'run price consumer' (efa27fe07e6d329a41c772efb1370670) under job master id 00000000000000000000000000000000.
+2024-02-16 22:37:35,878 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Starting scheduling with scheduling strategy [org.apache.flink.runtime.scheduler.strategy.PipelinedRegionSchedulingStrategy]
+2024-02-16 22:37:35,878 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Job run price consumer (efa27fe07e6d329a41c772efb1370670) switched from state CREATED to RUNNING.
+2024-02-16 22:37:35,878 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Custom Source (1/1) (1dbe2aa5ff11fe1350d0cd6f3a390764_bc764cd8ddf7a0cff126f51c16239658_0_0) switched from CREATED to SCHEDULED.
+2024-02-16 22:37:35,878 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Sink: Print to Std. Out (1/2) (1dbe2aa5ff11fe1350d0cd6f3a390764_0a448493b4782967b150582570326227_0_0) switched from CREATED to SCHEDULED.
+2024-02-16 22:37:35,878 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Sink: Print to Std. Out (2/2) (1dbe2aa5ff11fe1350d0cd6f3a390764_0a448493b4782967b150582570326227_1_0) switched from CREATED to SCHEDULED.
+2024-02-16 22:37:35,878 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Connecting to ResourceManager akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*(00000000000000000000000000000000)
+2024-02-16 22:37:35,879 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Resolved ResourceManager address, beginning registration
+2024-02-16 22:37:35,879 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Registering job manager 00000000000000000000000000000000@akka.tcp://flink@localhost:6123/user/rpc/jobmanager_6 for job efa27fe07e6d329a41c772efb1370670.
+2024-02-16 22:37:35,879 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Registered job manager 00000000000000000000000000000000@akka.tcp://flink@localhost:6123/user/rpc/jobmanager_6 for job efa27fe07e6d329a41c772efb1370670.
+2024-02-16 22:37:35,879 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - JobManager successfully registered at ResourceManager, leader id: 00000000000000000000000000000000.
+2024-02-16 22:37:35,879 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.DeclarativeSlotManager [] - Received resource requirements from job efa27fe07e6d329a41c772efb1370670: [ResourceRequirement{resourceProfile=ResourceProfile{UNKNOWN}, numberOfRequiredSlots=2}]
+2024-02-16 22:37:35,944 WARN  org.apache.flink.runtime.resourcemanager.slotmanager.DeclarativeSlotManager [] - Could not fulfill resource requirements of job efa27fe07e6d329a41c772efb1370670. Free slots: 0
+2024-02-16 22:37:35,944 WARN  org.apache.flink.runtime.jobmaster.slotpool.DeclarativeSlotPoolBridge [] - Could not acquire the minimum required resources, failing slot requests. Acquired: [ResourceRequirement{resourceProfile=ResourceProfile{cpuCores=1, taskHeapMemory=384.000mb (402653174 bytes), taskOffHeapMemory=0 bytes, managedMemory=512.000mb (536870920 bytes), networkMemory=128.000mb (134217730 bytes)}, numberOfRequiredSlots=1}]. Current slot pool status: Registered TMs: 0, registered slots: 0 free slots: 0
+2024-02-16 22:37:35,945 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Custom Source (1/1) (1dbe2aa5ff11fe1350d0cd6f3a390764_bc764cd8ddf7a0cff126f51c16239658_0_0) switched from SCHEDULED to FAILED on [unassigned resource].
+org.apache.flink.runtime.jobmanager.scheduler.NoResourceAvailableException: Could not acquire the minimum required resources.
+2024-02-16 22:37:35,945 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Discarding the results produced by task execution 1dbe2aa5ff11fe1350d0cd6f3a390764_bc764cd8ddf7a0cff126f51c16239658_0_0.
+2024-02-16 22:37:35,945 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Job run price consumer (efa27fe07e6d329a41c772efb1370670) switched from state RUNNING to FAILING.
+org.apache.flink.runtime.JobException: Recovery is suppressed by NoRestartBackoffTimeStrategy
+	at org.apache.flink.runtime.executiongraph.failover.flip1.ExecutionFailureHandler.handleFailure(ExecutionFailureHandler.java:139) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.executiongraph.failover.flip1.ExecutionFailureHandler.getFailureHandlingResult(ExecutionFailureHandler.java:83) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.recordTaskFailure(DefaultScheduler.java:258) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.handleTaskFailure(DefaultScheduler.java:249) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.onTaskFailed(DefaultScheduler.java:242) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.SchedulerBase.onTaskExecutionStateUpdate(SchedulerBase.java:748) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.SchedulerBase.updateTaskExecutionState(SchedulerBase.java:725) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.UpdateSchedulerNgOnInternalFailuresListener.notifyTaskFailure(UpdateSchedulerNgOnInternalFailuresListener.java:51) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.executiongraph.DefaultExecutionGraph.notifySchedulerNgAboutInternalTaskFailure(DefaultExecutionGraph.java:1664) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.executiongraph.Execution.processFail(Execution.java:1140) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.executiongraph.Execution.processFail(Execution.java:1080) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.executiongraph.Execution.markFailed(Execution.java:919) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.DefaultExecutionOperations.markFailed(DefaultExecutionOperations.java:43) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.DefaultExecutionDeployer.handleTaskDeploymentFailure(DefaultExecutionDeployer.java:327) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.DefaultExecutionDeployer.lambda$assignAllResourcesAndRegisterProducedPartitions$2(DefaultExecutionDeployer.java:170) ~[flink-dist-1.17.0.jar:1.17.0]
+	at java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:930) ~[?:?]
+	at java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:907) ~[?:?]
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506) ~[?:?]
+	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2094) ~[?:?]
+	at org.apache.flink.runtime.jobmaster.slotpool.PendingRequest.failRequest(PendingRequest.java:88) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.jobmaster.slotpool.DeclarativeSlotPoolBridge.cancelPendingRequests(DeclarativeSlotPoolBridge.java:185) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.jobmaster.slotpool.DeclarativeSlotPoolBridge.failPendingRequests(DeclarativeSlotPoolBridge.java:408) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.jobmaster.slotpool.DeclarativeSlotPoolBridge.notifyNotEnoughResourcesAvailable(DeclarativeSlotPoolBridge.java:396) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.jobmaster.JobMaster.notifyNotEnoughResourcesAvailable(JobMaster.java:887) ~[flink-dist-1.17.0.jar:1.17.0]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.lambda$handleRpcInvocation$0(AkkaRpcActor.java:301) ~[flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at org.apache.flink.runtime.concurrent.akka.ClassLoadingUtils.runWithContextClassLoader(ClassLoadingUtils.java:83) ~[flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.handleRpcInvocation(AkkaRpcActor.java:300) ~[flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.handleRpcMessage(AkkaRpcActor.java:222) ~[flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at org.apache.flink.runtime.rpc.akka.FencedAkkaRpcActor.handleRpcMessage(FencedAkkaRpcActor.java:84) ~[flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.handleMessage(AkkaRpcActor.java:168) ~[flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:24) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:20) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at scala.PartialFunction.applyOrElse(PartialFunction.scala:127) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:126) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:20) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:175) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.actor.Actor.aroundReceive(Actor.scala:537) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.actor.Actor.aroundReceive$(Actor.scala:535) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.actor.AbstractActor.aroundReceive(AbstractActor.scala:220) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:579) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.actor.ActorCell.invoke(ActorCell.scala:547) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:270) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.dispatch.Mailbox.run(Mailbox.scala:231) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:243) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290) [?:?]
+	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020) [?:?]
+	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656) [?:?]
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594) [?:?]
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183) [?:?]
+Caused by: java.util.concurrent.CompletionException: java.util.concurrent.CompletionException: org.apache.flink.runtime.jobmanager.scheduler.NoResourceAvailableException: Could not acquire the minimum required resources.
+	at org.apache.flink.runtime.scheduler.DefaultExecutionDeployer.lambda$assignResource$4(DefaultExecutionDeployer.java:227) ~[flink-dist-1.17.0.jar:1.17.0]
+	... 40 more
+Caused by: java.util.concurrent.CompletionException: org.apache.flink.runtime.jobmanager.scheduler.NoResourceAvailableException: Could not acquire the minimum required resources.
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331) ~[?:?]
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346) ~[?:?]
+	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:632) ~[?:?]
+	... 38 more
+Caused by: org.apache.flink.runtime.jobmanager.scheduler.NoResourceAvailableException: Could not acquire the minimum required resources.
+2024-02-16 22:37:35,946 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Sink: Print to Std. Out (1/2) (1dbe2aa5ff11fe1350d0cd6f3a390764_0a448493b4782967b150582570326227_0_0) switched from SCHEDULED to CANCELING.
+2024-02-16 22:37:35,946 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Sink: Print to Std. Out (1/2) (1dbe2aa5ff11fe1350d0cd6f3a390764_0a448493b4782967b150582570326227_0_0) switched from CANCELING to CANCELED.
+2024-02-16 22:37:35,946 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Discarding the results produced by task execution 1dbe2aa5ff11fe1350d0cd6f3a390764_0a448493b4782967b150582570326227_0_0.
+2024-02-16 22:37:35,947 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Sink: Print to Std. Out (2/2) (1dbe2aa5ff11fe1350d0cd6f3a390764_0a448493b4782967b150582570326227_1_0) switched from SCHEDULED to CANCELING.
+2024-02-16 22:37:35,947 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Sink: Print to Std. Out (2/2) (1dbe2aa5ff11fe1350d0cd6f3a390764_0a448493b4782967b150582570326227_1_0) switched from CANCELING to CANCELED.
+2024-02-16 22:37:35,947 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Discarding the results produced by task execution 1dbe2aa5ff11fe1350d0cd6f3a390764_0a448493b4782967b150582570326227_1_0.
+2024-02-16 22:37:35,947 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Job run price consumer (efa27fe07e6d329a41c772efb1370670) switched from state FAILING to FAILED.
+org.apache.flink.runtime.JobException: Recovery is suppressed by NoRestartBackoffTimeStrategy
+	at org.apache.flink.runtime.executiongraph.failover.flip1.ExecutionFailureHandler.handleFailure(ExecutionFailureHandler.java:139) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.executiongraph.failover.flip1.ExecutionFailureHandler.getFailureHandlingResult(ExecutionFailureHandler.java:83) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.recordTaskFailure(DefaultScheduler.java:258) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.handleTaskFailure(DefaultScheduler.java:249) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.onTaskFailed(DefaultScheduler.java:242) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.SchedulerBase.onTaskExecutionStateUpdate(SchedulerBase.java:748) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.SchedulerBase.updateTaskExecutionState(SchedulerBase.java:725) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.UpdateSchedulerNgOnInternalFailuresListener.notifyTaskFailure(UpdateSchedulerNgOnInternalFailuresListener.java:51) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.executiongraph.DefaultExecutionGraph.notifySchedulerNgAboutInternalTaskFailure(DefaultExecutionGraph.java:1664) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.executiongraph.Execution.processFail(Execution.java:1140) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.executiongraph.Execution.processFail(Execution.java:1080) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.executiongraph.Execution.markFailed(Execution.java:919) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.DefaultExecutionOperations.markFailed(DefaultExecutionOperations.java:43) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.DefaultExecutionDeployer.handleTaskDeploymentFailure(DefaultExecutionDeployer.java:327) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.scheduler.DefaultExecutionDeployer.lambda$assignAllResourcesAndRegisterProducedPartitions$2(DefaultExecutionDeployer.java:170) ~[flink-dist-1.17.0.jar:1.17.0]
+	at java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:930) ~[?:?]
+	at java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:907) ~[?:?]
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506) ~[?:?]
+	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2094) ~[?:?]
+	at org.apache.flink.runtime.jobmaster.slotpool.PendingRequest.failRequest(PendingRequest.java:88) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.jobmaster.slotpool.DeclarativeSlotPoolBridge.cancelPendingRequests(DeclarativeSlotPoolBridge.java:185) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.jobmaster.slotpool.DeclarativeSlotPoolBridge.failPendingRequests(DeclarativeSlotPoolBridge.java:408) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.jobmaster.slotpool.DeclarativeSlotPoolBridge.notifyNotEnoughResourcesAvailable(DeclarativeSlotPoolBridge.java:396) ~[flink-dist-1.17.0.jar:1.17.0]
+	at org.apache.flink.runtime.jobmaster.JobMaster.notifyNotEnoughResourcesAvailable(JobMaster.java:887) ~[flink-dist-1.17.0.jar:1.17.0]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.lambda$handleRpcInvocation$0(AkkaRpcActor.java:301) ~[flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at org.apache.flink.runtime.concurrent.akka.ClassLoadingUtils.runWithContextClassLoader(ClassLoadingUtils.java:83) ~[flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.handleRpcInvocation(AkkaRpcActor.java:300) ~[flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.handleRpcMessage(AkkaRpcActor.java:222) ~[flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at org.apache.flink.runtime.rpc.akka.FencedAkkaRpcActor.handleRpcMessage(FencedAkkaRpcActor.java:84) ~[flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.handleMessage(AkkaRpcActor.java:168) ~[flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:24) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:20) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at scala.PartialFunction.applyOrElse(PartialFunction.scala:127) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:126) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:20) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:175) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.actor.Actor.aroundReceive(Actor.scala:537) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.actor.Actor.aroundReceive$(Actor.scala:535) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.actor.AbstractActor.aroundReceive(AbstractActor.scala:220) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:579) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.actor.ActorCell.invoke(ActorCell.scala:547) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:270) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.dispatch.Mailbox.run(Mailbox.scala:231) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:243) [flink-rpc-akka_5fb6ff1b-3500-45e2-bacd-e0a209eadbde.jar:1.17.0]
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290) [?:?]
+	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020) [?:?]
+	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656) [?:?]
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594) [?:?]
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183) [?:?]
+Caused by: java.util.concurrent.CompletionException: java.util.concurrent.CompletionException: org.apache.flink.runtime.jobmanager.scheduler.NoResourceAvailableException: Could not acquire the minimum required resources.
+	at org.apache.flink.runtime.scheduler.DefaultExecutionDeployer.lambda$assignResource$4(DefaultExecutionDeployer.java:227) ~[flink-dist-1.17.0.jar:1.17.0]
+	... 40 more
+Caused by: java.util.concurrent.CompletionException: org.apache.flink.runtime.jobmanager.scheduler.NoResourceAvailableException: Could not acquire the minimum required resources.
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331) ~[?:?]
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346) ~[?:?]
+	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:632) ~[?:?]
+	... 38 more
+Caused by: org.apache.flink.runtime.jobmanager.scheduler.NoResourceAvailableException: Could not acquire the minimum required resources.
+2024-02-16 22:37:35,947 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Stopping checkpoint coordinator for job efa27fe07e6d329a41c772efb1370670.
+2024-02-16 22:37:35,948 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.DeclarativeSlotManager [] - Clearing resource requirements of job efa27fe07e6d329a41c772efb1370670
+2024-02-16 22:37:35,948 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Job efa27fe07e6d329a41c772efb1370670 reached terminal state FAILED.
+org.apache.flink.runtime.JobException: Recovery is suppressed by NoRestartBackoffTimeStrategy
+	at org.apache.flink.runtime.executiongraph.failover.flip1.ExecutionFailureHandler.handleFailure(ExecutionFailureHandler.java:139)
+	at org.apache.flink.runtime.executiongraph.failover.flip1.ExecutionFailureHandler.getFailureHandlingResult(ExecutionFailureHandler.java:83)
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.recordTaskFailure(DefaultScheduler.java:258)
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.handleTaskFailure(DefaultScheduler.java:249)
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.onTaskFailed(DefaultScheduler.java:242)
+	at org.apache.flink.runtime.scheduler.SchedulerBase.onTaskExecutionStateUpdate(SchedulerBase.java:748)
+	at org.apache.flink.runtime.scheduler.SchedulerBase.updateTaskExecutionState(SchedulerBase.java:725)
+	at org.apache.flink.runtime.scheduler.UpdateSchedulerNgOnInternalFailuresListener.notifyTaskFailure(UpdateSchedulerNgOnInternalFailuresListener.java:51)
+	at org.apache.flink.runtime.executiongraph.DefaultExecutionGraph.notifySchedulerNgAboutInternalTaskFailure(DefaultExecutionGraph.java:1664)
+	at org.apache.flink.runtime.executiongraph.Execution.processFail(Execution.java:1140)
+	at org.apache.flink.runtime.executiongraph.Execution.processFail(Execution.java:1080)
+	at org.apache.flink.runtime.executiongraph.Execution.markFailed(Execution.java:919)
+	at org.apache.flink.runtime.scheduler.DefaultExecutionOperations.markFailed(DefaultExecutionOperations.java:43)
+	at org.apache.flink.runtime.scheduler.DefaultExecutionDeployer.handleTaskDeploymentFailure(DefaultExecutionDeployer.java:327)
+	at org.apache.flink.runtime.scheduler.DefaultExecutionDeployer.lambda$assignAllResourcesAndRegisterProducedPartitions$2(DefaultExecutionDeployer.java:170)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:930)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:907)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2094)
+	at org.apache.flink.runtime.jobmaster.slotpool.PendingRequest.failRequest(PendingRequest.java:88)
+	at org.apache.flink.runtime.jobmaster.slotpool.DeclarativeSlotPoolBridge.cancelPendingRequests(DeclarativeSlotPoolBridge.java:185)
+	at org.apache.flink.runtime.jobmaster.slotpool.DeclarativeSlotPoolBridge.failPendingRequests(DeclarativeSlotPoolBridge.java:408)
+	at org.apache.flink.runtime.jobmaster.slotpool.DeclarativeSlotPoolBridge.notifyNotEnoughResourcesAvailable(DeclarativeSlotPoolBridge.java:396)
+	at org.apache.flink.runtime.jobmaster.JobMaster.notifyNotEnoughResourcesAvailable(JobMaster.java:887)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.lambda$handleRpcInvocation$0(AkkaRpcActor.java:301)
+	at org.apache.flink.runtime.concurrent.akka.ClassLoadingUtils.runWithContextClassLoader(ClassLoadingUtils.java:83)
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.handleRpcInvocation(AkkaRpcActor.java:300)
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.handleRpcMessage(AkkaRpcActor.java:222)
+	at org.apache.flink.runtime.rpc.akka.FencedAkkaRpcActor.handleRpcMessage(FencedAkkaRpcActor.java:84)
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.handleMessage(AkkaRpcActor.java:168)
+	at akka.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:24)
+	at akka.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:20)
+	at scala.PartialFunction.applyOrElse(PartialFunction.scala:127)
+	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:126)
+	at akka.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:20)
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:175)
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176)
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176)
+	at akka.actor.Actor.aroundReceive(Actor.scala:537)
+	at akka.actor.Actor.aroundReceive$(Actor.scala:535)
+	at akka.actor.AbstractActor.aroundReceive(AbstractActor.scala:220)
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:579)
+	at akka.actor.ActorCell.invoke(ActorCell.scala:547)
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:270)
+	at akka.dispatch.Mailbox.run(Mailbox.scala:231)
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:243)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
+Caused by: java.util.concurrent.CompletionException: java.util.concurrent.CompletionException: org.apache.flink.runtime.jobmanager.scheduler.NoResourceAvailableException: Could not acquire the minimum required resources.
+	at org.apache.flink.runtime.scheduler.DefaultExecutionDeployer.lambda$assignResource$4(DefaultExecutionDeployer.java:227)
+	... 40 more
+Caused by: java.util.concurrent.CompletionException: org.apache.flink.runtime.jobmanager.scheduler.NoResourceAvailableException: Could not acquire the minimum required resources.
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:632)
+	... 38 more
+Caused by: org.apache.flink.runtime.jobmanager.scheduler.NoResourceAvailableException: Could not acquire the minimum required resources.
+2024-02-16 22:37:35,954 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Job efa27fe07e6d329a41c772efb1370670 has been registered for cleanup in the JobResultStore after reaching a terminal state.
+2024-02-16 22:37:35,954 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Stopping the JobMaster for job 'run price consumer' (efa27fe07e6d329a41c772efb1370670).
+2024-02-16 22:37:35,954 INFO  org.apache.flink.runtime.checkpoint.StandaloneCompletedCheckpointStore [] - Shutting down
+2024-02-16 22:37:35,955 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Disconnect TaskExecutor localhost:57128-6336fc because: Stopping JobMaster for job 'run price consumer' (efa27fe07e6d329a41c772efb1370670).
+2024-02-16 22:37:35,955 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Close ResourceManager connection 36f82da4fa08b47717870ea66f066594: Stopping JobMaster for job 'run price consumer' (efa27fe07e6d329a41c772efb1370670).
+2024-02-16 22:37:35,955 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Disconnect job manager 00000000000000000000000000000000@akka.tcp://flink@localhost:6123/user/rpc/jobmanager_6 for job efa27fe07e6d329a41c772efb1370670 from the resource manager.
+2024-02-16 22:40:38,667 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Closing TaskExecutor connection localhost:57128-6336fc because: The TaskExecutor is shutting down.
+2024-02-16 22:40:39,299 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - RECEIVED SIGNAL 15: SIGTERM. Shutting down as requested.
+2024-02-16 22:40:39,299 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - Shutting StandaloneSessionClusterEntrypoint down with application status UNKNOWN. Diagnostics Cluster entrypoint has been closed externally..
+2024-02-16 22:40:39,301 INFO  org.apache.flink.runtime.blob.BlobServer                     [] - Stopped BLOB server at 127.0.0.1:57009

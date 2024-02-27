@@ -1,0 +1,753 @@
+2024-02-16 22:42:00,474 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - --------------------------------------------------------------------------------
+2024-02-16 22:42:00,475 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  Preconfiguration: 
+2024-02-16 22:42:00,475 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - 
+
+
+RESOURCE_PARAMS extraction logs:
+jvm_params: -Xmx536870902 -Xms536870902 -XX:MaxDirectMemorySize=268435458 -XX:MaxMetaspaceSize=268435456
+dynamic_configs: -D taskmanager.memory.network.min=134217730b -D taskmanager.cpu.cores=1.0 -D taskmanager.memory.task.off-heap.size=0b -D taskmanager.memory.jvm-metaspace.size=268435456b -D external-resources=none -D taskmanager.memory.jvm-overhead.min=201326592b -D taskmanager.memory.framework.off-heap.size=134217728b -D taskmanager.memory.network.max=134217730b -D taskmanager.memory.framework.heap.size=134217728b -D taskmanager.memory.managed.size=536870920b -D taskmanager.memory.task.heap.size=402653174b -D taskmanager.numberOfTaskSlots=1 -D taskmanager.memory.jvm-overhead.max=201326592b
+logs: WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
+INFO  [] - Loading configuration property: taskmanager.memory.process.size, 1728m
+INFO  [] - Loading configuration property: jobmanager.bind-host, localhost
+INFO  [] - Loading configuration property: taskmanager.bind-host, localhost
+INFO  [] - Loading configuration property: taskmanager.host, localhost
+INFO  [] - Loading configuration property: parallelism.default, 1
+INFO  [] - Loading configuration property: jobmanager.execution.failover-strategy, region
+INFO  [] - Loading configuration property: jobmanager.rpc.address, localhost
+INFO  [] - Loading configuration property: taskmanager.numberOfTaskSlots, 1
+INFO  [] - Loading configuration property: rest.address, localhost
+INFO  [] - Loading configuration property: jobmanager.memory.process.size, 1600m
+INFO  [] - Loading configuration property: jobmanager.rpc.port, 6123
+INFO  [] - Loading configuration property: rest.bind-address, localhost
+INFO  [] - The derived from fraction jvm overhead memory (172.800mb (181193935 bytes)) is less than its min value 192.000mb (201326592 bytes), min value will be used instead
+INFO  [] - Final TaskExecutor Memory configuration:
+INFO  [] -   Total Process Memory:          1.688gb (1811939328 bytes)
+INFO  [] -     Total Flink Memory:          1.250gb (1342177280 bytes)
+INFO  [] -       Total JVM Heap Memory:     512.000mb (536870902 bytes)
+INFO  [] -         Framework:               128.000mb (134217728 bytes)
+INFO  [] -         Task:                    384.000mb (402653174 bytes)
+INFO  [] -       Total Off-heap Memory:     768.000mb (805306378 bytes)
+INFO  [] -         Managed:                 512.000mb (536870920 bytes)
+INFO  [] -         Total JVM Direct Memory: 256.000mb (268435458 bytes)
+INFO  [] -           Framework:             128.000mb (134217728 bytes)
+INFO  [] -           Task:                  0 bytes
+INFO  [] -           Network:               128.000mb (134217730 bytes)
+INFO  [] -     JVM Metaspace:               256.000mb (268435456 bytes)
+INFO  [] -     JVM Overhead:                192.000mb (201326592 bytes)
+
+2024-02-16 22:42:00,475 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - --------------------------------------------------------------------------------
+2024-02-16 22:42:00,475 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  Starting TaskManager (Version: 1.17.0, Scala: 2.12, Rev:69ecda0, Date:2023-03-17T10:30:06+01:00)
+2024-02-16 22:42:00,475 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  OS current user: jungeui
+2024-02-16 22:42:00,475 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  Current Hadoop/Kerberos user: <no hadoop dependency found>
+2024-02-16 22:42:00,475 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  JVM: OpenJDK 64-Bit Server VM - Azul Systems, Inc. - 11/11.0.21+9-LTS
+2024-02-16 22:42:00,475 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  Arch: aarch64
+2024-02-16 22:42:00,475 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  Maximum heap size: 512 MiBytes
+2024-02-16 22:42:00,475 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  JAVA_HOME: /Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home
+2024-02-16 22:42:00,475 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  No Hadoop Dependency available
+2024-02-16 22:42:00,475 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  JVM Options:
+2024-02-16 22:42:00,475 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -XX:+UseG1GC
+2024-02-16 22:42:00,475 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -Xmx536870902
+2024-02-16 22:42:00,475 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -Xms536870902
+2024-02-16 22:42:00,475 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -XX:MaxDirectMemorySize=268435458
+2024-02-16 22:42:00,475 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -XX:MaxMetaspaceSize=268435456
+2024-02-16 22:42:00,475 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -Dlog.file=/Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/log/flink-jungeui-taskexecutor-0-findas-MacBook-Pro.local.log
+2024-02-16 22:42:00,476 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -Dlog4j.configuration=file:/Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/conf/log4j.properties
+2024-02-16 22:42:00,476 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -Dlog4j.configurationFile=file:/Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/conf/log4j.properties
+2024-02-16 22:42:00,476 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -Dlogback.configurationFile=file:/Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/conf/logback.xml
+2024-02-16 22:42:00,476 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  Program Arguments:
+2024-02-16 22:42:00,476 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --configDir
+2024-02-16 22:42:00,476 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     /Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/conf
+2024-02-16 22:42:00,476 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2024-02-16 22:42:00,476 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.network.min=134217730b
+2024-02-16 22:42:00,476 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2024-02-16 22:42:00,476 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.cpu.cores=1.0
+2024-02-16 22:42:00,476 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2024-02-16 22:42:00,476 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.task.off-heap.size=0b
+2024-02-16 22:42:00,477 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2024-02-16 22:42:00,477 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.jvm-metaspace.size=268435456b
+2024-02-16 22:42:00,477 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2024-02-16 22:42:00,477 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     external-resources=none
+2024-02-16 22:42:00,477 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2024-02-16 22:42:00,477 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.jvm-overhead.min=201326592b
+2024-02-16 22:42:00,477 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2024-02-16 22:42:00,477 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.framework.off-heap.size=134217728b
+2024-02-16 22:42:00,477 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2024-02-16 22:42:00,477 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.network.max=134217730b
+2024-02-16 22:42:00,477 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2024-02-16 22:42:00,477 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.framework.heap.size=134217728b
+2024-02-16 22:42:00,477 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2024-02-16 22:42:00,477 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.managed.size=536870920b
+2024-02-16 22:42:00,477 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2024-02-16 22:42:00,477 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.task.heap.size=402653174b
+2024-02-16 22:42:00,477 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2024-02-16 22:42:00,477 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.numberOfTaskSlots=1
+2024-02-16 22:42:00,477 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2024-02-16 22:42:00,477 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.jvm-overhead.max=201326592b
+2024-02-16 22:42:00,477 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  Classpath: /Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/lib/flink-cep-1.17.0.jar:/Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/lib/flink-connector-files-1.17.0.jar:/Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/lib/flink-csv-1.17.0.jar:/Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/lib/flink-json-1.17.0.jar:/Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/lib/flink-scala_2.12-1.17.0.jar:/Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/lib/flink-table-api-java-uber-1.17.0.jar:/Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/lib/flink-table-planner-loader-1.17.0.jar:/Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/lib/flink-table-runtime-1.17.0.jar:/Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/lib/log4j-1.2-api-2.17.1.jar:/Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/lib/log4j-api-2.17.1.jar:/Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/lib/log4j-core-2.17.1.jar:/Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/lib/log4j-slf4j-impl-2.17.1.jar:/Users/jungeui/Documents/workspace/Flink-Study/flink-1.17.0/lib/flink-dist-1.17.0.jar::::
+2024-02-16 22:42:00,477 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - --------------------------------------------------------------------------------
+2024-02-16 22:42:00,478 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - Registered UNIX signal handlers for [TERM, HUP, INT]
+2024-02-16 22:42:00,479 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - Maximum number of open file descriptors is 10240.
+2024-02-16 22:42:00,484 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.memory.process.size, 1728m
+2024-02-16 22:42:00,484 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.bind-host, localhost
+2024-02-16 22:42:00,484 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.bind-host, localhost
+2024-02-16 22:42:00,484 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.host, localhost
+2024-02-16 22:42:00,484 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: parallelism.default, 1
+2024-02-16 22:42:00,484 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.execution.failover-strategy, region
+2024-02-16 22:42:00,484 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.rpc.address, localhost
+2024-02-16 22:42:00,484 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.numberOfTaskSlots, 1
+2024-02-16 22:42:00,484 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: rest.address, localhost
+2024-02-16 22:42:00,484 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.memory.process.size, 1600m
+2024-02-16 22:42:00,484 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.rpc.port, 6123
+2024-02-16 22:42:00,484 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: rest.bind-address, localhost
+2024-02-16 22:42:00,484 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.network.min, 134217730b
+2024-02-16 22:42:00,484 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.jvm-metaspace.size, 268435456b
+2024-02-16 22:42:00,484 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.task.off-heap.size, 0b
+2024-02-16 22:42:00,485 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.cpu.cores, 1.0
+2024-02-16 22:42:00,485 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: external-resources, none
+2024-02-16 22:42:00,485 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.jvm-overhead.min, 201326592b
+2024-02-16 22:42:00,485 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.framework.off-heap.size, 134217728b
+2024-02-16 22:42:00,485 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.network.max, 134217730b
+2024-02-16 22:42:00,485 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.framework.heap.size, 134217728b
+2024-02-16 22:42:00,485 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.managed.size, 536870920b
+2024-02-16 22:42:00,485 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.task.heap.size, 402653174b
+2024-02-16 22:42:00,485 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.numberOfTaskSlots, 1
+2024-02-16 22:42:00,485 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.jvm-overhead.max, 201326592b
+2024-02-16 22:42:00,509 INFO  org.apache.flink.core.fs.FileSystem                          [] - Hadoop is not in the classpath/dependencies. The extended set of supported File Systems via Hadoop is not available.
+2024-02-16 22:42:00,517 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-statsd
+2024-02-16 22:42:00,520 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-prometheus
+2024-02-16 22:42:00,521 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-graphite
+2024-02-16 22:42:00,521 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: external-resource-gpu
+2024-02-16 22:42:00,521 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-jmx
+2024-02-16 22:42:00,521 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-influx
+2024-02-16 22:42:00,521 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-slf4j
+2024-02-16 22:42:00,521 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-datadog
+2024-02-16 22:42:00,536 INFO  org.apache.flink.runtime.state.changelog.StateChangelogStorageLoader [] - StateChangelogStorageLoader initialized with shortcut names {memory,filesystem}.
+2024-02-16 22:42:00,536 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-statsd
+2024-02-16 22:42:00,536 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-prometheus
+2024-02-16 22:42:00,536 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-graphite
+2024-02-16 22:42:00,536 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: external-resource-gpu
+2024-02-16 22:42:00,536 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-jmx
+2024-02-16 22:42:00,536 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-influx
+2024-02-16 22:42:00,536 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-slf4j
+2024-02-16 22:42:00,536 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-datadog
+2024-02-16 22:42:00,537 INFO  org.apache.flink.runtime.state.changelog.StateChangelogStorageLoader [] - StateChangelogStorageLoader initialized with shortcut names {memory,filesystem}.
+2024-02-16 22:42:00,545 INFO  org.apache.flink.runtime.security.modules.HadoopModuleFactory [] - Cannot create Hadoop Security Module because Hadoop cannot be found in the Classpath.
+2024-02-16 22:42:00,560 INFO  org.apache.flink.runtime.security.modules.JaasModule         [] - Jaas file will be created as /var/folders/yq/hx95c8bd3zn9mqv34g3gxbfc0000gp/T/jaas-15095668586316314169.conf.
+2024-02-16 22:42:00,565 INFO  org.apache.flink.runtime.security.contexts.HadoopSecurityContextFactory [] - Cannot install HadoopSecurityContext because Hadoop cannot be found in the Classpath.
+2024-02-16 22:42:00,774 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - Using configured hostname/address for TaskManager: localhost.
+2024-02-16 22:42:00,798 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils        [] - Trying to start actor system, external address localhost:0, bind address localhost:0.
+2024-02-16 22:42:01,180 INFO  akka.event.slf4j.Slf4jLogger                                 [] - Slf4jLogger started
+2024-02-16 22:42:01,193 INFO  akka.remote.RemoteActorRefProvider                           [] - Akka Cluster not in use - enabling unsafe features anyway because `akka.remote.use-unsafe-remote-features-outside-cluster` has been enabled.
+2024-02-16 22:42:01,193 INFO  akka.remote.Remoting                                         [] - Starting remoting
+2024-02-16 22:42:01,278 INFO  akka.remote.Remoting                                         [] - Remoting started; listening on addresses :[akka.tcp://flink@localhost:60235]
+2024-02-16 22:42:01,329 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils        [] - Actor system started at akka.tcp://flink@localhost:60235
+2024-02-16 22:42:01,344 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - Using working directory: WorkingDirectory(/var/folders/yq/hx95c8bd3zn9mqv34g3gxbfc0000gp/T/tm_localhost:60235-112fe9)
+2024-02-16 22:42:01,350 INFO  org.apache.flink.runtime.metrics.MetricRegistryImpl          [] - No metrics reporter configured, no metrics will be exposed/reported.
+2024-02-16 22:42:01,352 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils        [] - Trying to start actor system, external address localhost:0, bind address localhost:0.
+2024-02-16 22:42:01,360 INFO  akka.event.slf4j.Slf4jLogger                                 [] - Slf4jLogger started
+2024-02-16 22:42:01,361 INFO  akka.remote.RemoteActorRefProvider                           [] - Akka Cluster not in use - enabling unsafe features anyway because `akka.remote.use-unsafe-remote-features-outside-cluster` has been enabled.
+2024-02-16 22:42:01,361 INFO  akka.remote.Remoting                                         [] - Starting remoting
+2024-02-16 22:42:01,366 INFO  akka.remote.Remoting                                         [] - Remoting started; listening on addresses :[akka.tcp://flink-metrics@localhost:60236]
+2024-02-16 22:42:01,371 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils        [] - Actor system started at akka.tcp://flink-metrics@localhost:60236
+2024-02-16 22:42:01,377 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService             [] - Starting RPC endpoint for org.apache.flink.runtime.metrics.dump.MetricQueryService at akka://flink-metrics/user/rpc/MetricQueryService_localhost:60235-112fe9 .
+2024-02-16 22:42:01,384 INFO  org.apache.flink.runtime.blob.PermanentBlobCache             [] - Created BLOB cache storage directory /var/folders/yq/hx95c8bd3zn9mqv34g3gxbfc0000gp/T/tm_localhost:60235-112fe9/blobStorage
+2024-02-16 22:42:01,387 INFO  org.apache.flink.runtime.blob.TransientBlobCache             [] - Created BLOB cache storage directory /var/folders/yq/hx95c8bd3zn9mqv34g3gxbfc0000gp/T/tm_localhost:60235-112fe9/blobStorage
+2024-02-16 22:42:01,390 INFO  org.apache.flink.runtime.externalresource.ExternalResourceUtils [] - Enabled external resources: []
+2024-02-16 22:42:01,390 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Loading delegation token receivers
+2024-02-16 22:42:01,393 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Delegation token receiver hadoopfs loaded and initialized
+2024-02-16 22:42:01,393 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Delegation token receiver hbase loaded and initialized
+2024-02-16 22:42:01,393 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-statsd
+2024-02-16 22:42:01,393 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-prometheus
+2024-02-16 22:42:01,393 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-graphite
+2024-02-16 22:42:01,394 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: external-resource-gpu
+2024-02-16 22:42:01,394 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-jmx
+2024-02-16 22:42:01,394 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-influx
+2024-02-16 22:42:01,394 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-slf4j
+2024-02-16 22:42:01,394 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-datadog
+2024-02-16 22:42:01,394 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Delegation token receivers loaded successfully
+2024-02-16 22:42:01,394 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - Starting TaskManager with ResourceID: localhost:60235-112fe9
+2024-02-16 22:42:01,406 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerServices    [] - Temporary file directory '/var/folders/yq/hx95c8bd3zn9mqv34g3gxbfc0000gp/T': total 460 GB, usable 292 GB (63.48% usable)
+2024-02-16 22:42:01,408 INFO  org.apache.flink.runtime.io.disk.iomanager.IOManager         [] - Created a new FileChannelManager for spilling of task related data to disk (joins, sorting, ...). Used directories:
+	/var/folders/yq/hx95c8bd3zn9mqv34g3gxbfc0000gp/T/flink-io-98f38628-a0c8-4028-a9fc-736588323a9c
+2024-02-16 22:42:01,412 INFO  org.apache.flink.runtime.io.network.netty.NettyConfig        [] - NettyConfig [server address: localhost/127.0.0.1, server port: 0, ssl enabled: false, memory segment size (bytes): 32768, transport type: AUTO, number of server threads: 1 (manual), number of client threads: 1 (manual), server connect backlog: 0 (use Netty's default), client connect timeout (sec): 120, send/receive buffer size (bytes): 0 (use Netty's default)]
+2024-02-16 22:42:01,443 INFO  org.apache.flink.runtime.io.network.NettyShuffleServiceFactory [] - Created a new FileChannelManager for storing result partitions of BLOCKING shuffles. Used directories:
+	/var/folders/yq/hx95c8bd3zn9mqv34g3gxbfc0000gp/T/flink-netty-shuffle-3ec92698-2775-4a49-9f43-834d133480ae
+2024-02-16 22:42:01,465 INFO  org.apache.flink.runtime.io.network.buffer.NetworkBufferPool [] - Allocated 128 MB for network buffer pool (number of memory segments: 4096, bytes per segment: 32768).
+2024-02-16 22:42:01,476 INFO  org.apache.flink.runtime.io.network.NettyShuffleEnvironment  [] - Starting the network environment and its components.
+2024-02-16 22:42:01,496 INFO  org.apache.flink.runtime.io.network.netty.NettyClient        [] - Transport type 'auto': using NIO.
+2024-02-16 22:42:01,496 INFO  org.apache.flink.runtime.io.network.netty.NettyClient        [] - Successful initialization (took 20 ms).
+2024-02-16 22:42:01,498 INFO  org.apache.flink.runtime.io.network.netty.NettyServer        [] - Transport type 'auto': using NIO.
+2024-02-16 22:42:01,517 INFO  org.apache.flink.runtime.io.network.netty.NettyServer        [] - Successful initialization (took 20 ms). Listening on SocketAddress /127.0.0.1:60237.
+2024-02-16 22:42:01,518 INFO  org.apache.flink.runtime.taskexecutor.KvStateService         [] - Starting the kvState service and its components.
+2024-02-16 22:42:01,530 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService             [] - Starting RPC endpoint for org.apache.flink.runtime.taskexecutor.TaskExecutor at akka://flink/user/rpc/taskmanager_0 .
+2024-02-16 22:42:01,538 INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService [] - Start job leader service.
+2024-02-16 22:42:01,540 INFO  org.apache.flink.runtime.filecache.FileCache                 [] - User file cache uses directory /var/folders/yq/hx95c8bd3zn9mqv34g3gxbfc0000gp/T/flink-dist-cache-f1a12fa3-20e5-44f5-86c4-337129dbdb7c
+2024-02-16 22:42:01,541 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Connecting to ResourceManager akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*(00000000000000000000000000000000).
+2024-02-16 22:42:01,642 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Resolved ResourceManager address, beginning registration
+2024-02-16 22:42:01,684 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Successful registration at resource manager akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_* under registration id c8bc8985f60b60a5e76efdcbe57a0002.
+2024-02-16 22:42:09,137 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Receive slot request 6f72bbcad4101a16b8710a1f09f08586 for job ad3c0112852d6476ab4e2023c3668593 from resource manager with leader id 00000000000000000000000000000000.
+2024-02-16 22:42:09,140 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Allocated slot for 6f72bbcad4101a16b8710a1f09f08586.
+2024-02-16 22:42:09,140 INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService [] - Add job ad3c0112852d6476ab4e2023c3668593 for job leader monitoring.
+2024-02-16 22:42:09,141 INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService [] - Try to register at job manager akka.tcp://flink@localhost:6123/user/rpc/jobmanager_2 with leader id 00000000-0000-0000-0000-000000000000.
+2024-02-16 22:42:09,150 INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService [] - Resolved JobManager address, beginning registration
+2024-02-16 22:42:09,160 INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService [] - Successful registration at job manager akka.tcp://flink@localhost:6123/user/rpc/jobmanager_2 for job ad3c0112852d6476ab4e2023c3668593.
+2024-02-16 22:42:09,160 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Establish JobManager connection for job ad3c0112852d6476ab4e2023c3668593.
+2024-02-16 22:42:09,161 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Offer reserved slots to the leader of job ad3c0112852d6476ab4e2023c3668593.
+2024-02-16 22:42:09,176 INFO  org.apache.flink.runtime.taskexecutor.slot.TaskSlotTableImpl [] - Activate slot 6f72bbcad4101a16b8710a1f09f08586.
+2024-02-16 22:42:09,185 INFO  org.apache.flink.runtime.state.changelog.StateChangelogStorageLoader [] - Creating a changelog storage with name 'memory'.
+2024-02-16 22:42:09,189 INFO  org.apache.flink.runtime.state.TaskExecutorChannelStateExecutorFactoryManager [] - Creating the channel state executor factory for job id ad3c0112852d6476ab4e2023c3668593
+2024-02-16 22:42:09,193 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Received task Source: Custom Source -> Sink: Print to Std. Out (1/1)#0 (ae0dbe715a4a0fcdca7cf04ccddddc34_cbc357ccb763df2852fee8c4fc7d55f2_0_0), deploy into slot with allocation id 6f72bbcad4101a16b8710a1f09f08586.
+2024-02-16 22:42:09,193 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Source: Custom Source -> Sink: Print to Std. Out (1/1)#0 (ae0dbe715a4a0fcdca7cf04ccddddc34_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from CREATED to DEPLOYING.
+2024-02-16 22:42:09,195 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Loading JAR files for task Source: Custom Source -> Sink: Print to Std. Out (1/1)#0 (ae0dbe715a4a0fcdca7cf04ccddddc34_cbc357ccb763df2852fee8c4fc7d55f2_0_0) [DEPLOYING].
+2024-02-16 22:42:09,195 INFO  org.apache.flink.runtime.taskexecutor.slot.TaskSlotTableImpl [] - Activate slot 6f72bbcad4101a16b8710a1f09f08586.
+2024-02-16 22:42:09,200 INFO  org.apache.flink.runtime.blob.BlobClient                     [] - Downloading ad3c0112852d6476ab4e2023c3668593/p-e0fb048ce2bdc4f4b6e40c409552dba6235e1926-ed875592b859aa46b15c964e39da6a66 from localhost/127.0.0.1:60228
+2024-02-16 22:42:09,574 INFO  org.apache.flink.streaming.runtime.tasks.StreamTask          [] - No state backend has been configured, using default (HashMap) org.apache.flink.runtime.state.hashmap.HashMapStateBackend@1eda9ae3
+2024-02-16 22:42:09,574 INFO  org.apache.flink.runtime.state.StateBackendLoader            [] - State backend loader loads the state backend as HashMapStateBackend
+2024-02-16 22:42:09,575 INFO  org.apache.flink.streaming.runtime.tasks.StreamTask          [] - Checkpoint storage is set to 'jobmanager'
+2024-02-16 22:42:09,581 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Source: Custom Source -> Sink: Print to Std. Out (1/1)#0 (ae0dbe715a4a0fcdca7cf04ccddddc34_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from DEPLOYING to INITIALIZING.
+2024-02-16 22:42:09,646 INFO  org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumerBase [] - Consumer subtask 0 has no restore state.
+2024-02-16 22:42:09,656 INFO  org.apache.kafka.clients.consumer.ConsumerConfig             [] - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-price-consumer-group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = price-consumer-group
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+
+2024-02-16 22:42:09,687 INFO  org.apache.kafka.common.utils.AppInfoParser                  [] - Kafka version: 3.2.3
+2024-02-16 22:42:09,687 INFO  org.apache.kafka.common.utils.AppInfoParser                  [] - Kafka commitId: 50029d3ed8ba576f
+2024-02-16 22:42:09,687 INFO  org.apache.kafka.common.utils.AppInfoParser                  [] - Kafka startTimeMs: 1708090929686
+2024-02-16 22:42:09,766 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:09,766 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:09,767 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:09,874 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:09,874 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:09,874 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:10,084 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:10,085 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:10,085 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:10,403 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:10,405 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:10,405 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:10,825 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:10,826 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:10,826 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:11,564 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:11,565 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:11,566 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:12,513 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:12,513 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:12,513 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:13,663 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:13,664 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:13,664 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:14,604 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:14,605 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:14,605 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:15,768 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:15,768 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:15,768 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:17,018 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:17,019 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:17,019 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:17,959 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:17,960 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:17,960 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:19,017 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:19,018 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:19,018 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:19,855 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:19,856 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:19,856 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:21,103 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:21,104 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:21,104 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:22,257 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:22,258 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:22,258 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:23,428 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:23,429 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:23,429 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:24,679 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:24,680 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:24,681 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:25,622 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:25,623 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:25,623 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:26,465 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:26,466 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:26,466 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:27,402 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:27,403 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:27,403 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:28,246 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:28,249 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:28,249 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:29,088 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:29,089 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:29,089 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:30,137 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:30,138 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:30,138 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:31,281 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:31,282 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:31,282 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:32,433 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:32,433 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:32,433 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:33,370 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:33,371 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:33,372 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:34,420 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:34,421 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:34,422 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:35,574 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:35,576 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:35,576 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:36,514 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:36,514 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:36,514 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:37,565 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:37,565 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:37,566 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:38,711 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:38,712 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:38,712 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:39,765 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:39,766 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:39,767 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:40,710 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:40,711 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:40,711 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:41,546 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:41,547 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:41,547 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:42,798 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:42,799 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:42,799 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:43,738 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:43,738 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:43,738 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:44,979 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:44,980 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:44,980 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:45,919 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:45,920 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:45,920 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:46,750 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:46,752 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:46,752 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:47,904 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:47,905 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:47,905 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:49,049 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:49,050 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:49,050 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:50,194 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:50,195 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:50,195 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:51,442 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:51,443 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:51,443 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:52,594 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:52,594 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:52,594 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:53,849 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:53,850 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:53,850 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:54,789 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:54,790 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:54,790 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:55,732 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:55,733 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:55,733 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:56,994 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:56,995 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:56,995 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:58,029 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:58,029 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:58,029 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:42:59,086 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:42:59,087 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:42:59,087 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:43:00,116 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:43:00,116 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:43:00,116 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:43:01,274 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:43:01,275 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:43:01,275 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:43:02,224 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:43:02,224 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:43:02,224 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:43:03,072 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:43:03,073 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:43:03,074 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:43:04,240 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:43:04,241 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:43:04,241 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:43:05,082 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:43:05,083 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:43:05,083 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:43:06,020 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:43:06,021 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:43:06,021 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:43:07,163 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:43:07,164 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:43:07,164 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:43:08,101 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:43:08,101 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:43:08,102 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:43:08,938 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 22:43:08,939 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-02-16 22:43:08,939 WARN  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-02-16 22:43:09,700 INFO  org.apache.kafka.clients.consumer.internals.ConsumerCoordinator [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-02-16 22:43:09,701 INFO  org.apache.kafka.clients.consumer.internals.ConsumerCoordinator [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Request joining group due to: consumer pro-actively leaving the group
+2024-02-16 22:43:09,702 INFO  org.apache.kafka.common.metrics.Metrics                      [] - Metrics scheduler closed
+2024-02-16 22:43:09,702 INFO  org.apache.kafka.common.metrics.Metrics                      [] - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-02-16 22:43:09,702 INFO  org.apache.kafka.common.metrics.Metrics                      [] - Metrics reporters closed
+2024-02-16 22:43:09,708 INFO  org.apache.kafka.common.utils.AppInfoParser                  [] - App info kafka.consumer for consumer-price-consumer-group-1 unregistered
+2024-02-16 22:43:09,711 WARN  org.apache.flink.runtime.taskmanager.Task                    [] - Source: Custom Source -> Sink: Print to Std. Out (1/1)#0 (ae0dbe715a4a0fcdca7cf04ccddddc34_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from INITIALIZING to FAILED with failure cause:
+org.apache.kafka.common.errors.TimeoutException: Timeout expired while fetching topic metadata
+2024-02-16 22:43:09,718 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Freeing task resources for Source: Custom Source -> Sink: Print to Std. Out (1/1)#0 (ae0dbe715a4a0fcdca7cf04ccddddc34_cbc357ccb763df2852fee8c4fc7d55f2_0_0).
+2024-02-16 22:43:09,724 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Un-registering task and sending final execution state FAILED to JobManager for task Source: Custom Source -> Sink: Print to Std. Out (1/1)#0 ae0dbe715a4a0fcdca7cf04ccddddc34_cbc357ccb763df2852fee8c4fc7d55f2_0_0.
+2024-02-16 22:43:09,788 INFO  org.apache.flink.runtime.taskexecutor.slot.TaskSlotTableImpl [] - Free slot TaskSlot(index:0, state:ACTIVE, resource profile: ResourceProfile{cpuCores=1, taskHeapMemory=384.000mb (402653174 bytes), taskOffHeapMemory=0 bytes, managedMemory=512.000mb (536870920 bytes), networkMemory=128.000mb (134217730 bytes)}, allocationId: 6f72bbcad4101a16b8710a1f09f08586, jobId: ad3c0112852d6476ab4e2023c3668593).
+2024-02-16 22:43:09,789 INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService [] - Remove job ad3c0112852d6476ab4e2023c3668593 from job leader monitoring.
+2024-02-16 22:43:09,790 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Close JobManager connection for job ad3c0112852d6476ab4e2023c3668593.
+2024-02-16 22:47:15,716 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Receive slot request b5be3f149b27a58d5f176929d451d9ff for job 0aaca53c01eb6a3abbadcf7346d60f5e from resource manager with leader id 00000000000000000000000000000000.
+2024-02-16 22:47:15,716 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Allocated slot for b5be3f149b27a58d5f176929d451d9ff.
+2024-02-16 22:47:15,716 INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService [] - Add job 0aaca53c01eb6a3abbadcf7346d60f5e for job leader monitoring.
+2024-02-16 22:47:15,716 INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService [] - Try to register at job manager akka.tcp://flink@localhost:6123/user/rpc/jobmanager_3 with leader id 00000000-0000-0000-0000-000000000000.
+2024-02-16 22:47:15,720 INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService [] - Resolved JobManager address, beginning registration
+2024-02-16 22:47:15,724 INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService [] - Successful registration at job manager akka.tcp://flink@localhost:6123/user/rpc/jobmanager_3 for job 0aaca53c01eb6a3abbadcf7346d60f5e.
+2024-02-16 22:47:15,724 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Establish JobManager connection for job 0aaca53c01eb6a3abbadcf7346d60f5e.
+2024-02-16 22:47:15,724 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Offer reserved slots to the leader of job 0aaca53c01eb6a3abbadcf7346d60f5e.
+2024-02-16 22:47:15,728 INFO  org.apache.flink.runtime.taskexecutor.slot.TaskSlotTableImpl [] - Activate slot b5be3f149b27a58d5f176929d451d9ff.
+2024-02-16 22:47:15,728 INFO  org.apache.flink.runtime.state.changelog.StateChangelogStorageLoader [] - Creating a changelog storage with name 'memory'.
+2024-02-16 22:47:15,728 INFO  org.apache.flink.runtime.state.TaskExecutorChannelStateExecutorFactoryManager [] - Creating the channel state executor factory for job id 0aaca53c01eb6a3abbadcf7346d60f5e
+2024-02-16 22:47:15,729 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Received task Source: Custom Source -> Sink: Print to Std. Out (1/1)#0 (654f48bd5e9071fc02c7077422419679_cbc357ccb763df2852fee8c4fc7d55f2_0_0), deploy into slot with allocation id b5be3f149b27a58d5f176929d451d9ff.
+2024-02-16 22:47:15,729 INFO  org.apache.flink.runtime.taskexecutor.slot.TaskSlotTableImpl [] - Activate slot b5be3f149b27a58d5f176929d451d9ff.
+2024-02-16 22:47:15,729 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Source: Custom Source -> Sink: Print to Std. Out (1/1)#0 (654f48bd5e9071fc02c7077422419679_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from CREATED to DEPLOYING.
+2024-02-16 22:47:15,729 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Loading JAR files for task Source: Custom Source -> Sink: Print to Std. Out (1/1)#0 (654f48bd5e9071fc02c7077422419679_cbc357ccb763df2852fee8c4fc7d55f2_0_0) [DEPLOYING].
+2024-02-16 22:47:15,730 INFO  org.apache.flink.runtime.blob.BlobClient                     [] - Downloading 0aaca53c01eb6a3abbadcf7346d60f5e/p-89af3c7da80af125594579b2c387b3c16c870ca4-a0f282aead9abc40d0fa3d24c6001ea9 from localhost/127.0.0.1:60228
+2024-02-16 22:47:16,082 INFO  org.apache.flink.streaming.runtime.tasks.StreamTask          [] - No state backend has been configured, using default (HashMap) org.apache.flink.runtime.state.hashmap.HashMapStateBackend@23272cce
+2024-02-16 22:47:16,082 INFO  org.apache.flink.runtime.state.StateBackendLoader            [] - State backend loader loads the state backend as HashMapStateBackend
+2024-02-16 22:47:16,082 INFO  org.apache.flink.streaming.runtime.tasks.StreamTask          [] - Checkpoint storage is set to 'jobmanager'
+2024-02-16 22:47:16,082 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Source: Custom Source -> Sink: Print to Std. Out (1/1)#0 (654f48bd5e9071fc02c7077422419679_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from DEPLOYING to INITIALIZING.
+2024-02-16 22:47:16,096 INFO  org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumerBase [] - Consumer subtask 0 has no restore state.
+2024-02-16 22:47:16,106 INFO  org.apache.kafka.clients.consumer.ConsumerConfig             [] - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:29092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-price-consumer-group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = price-consumer-group
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+
+2024-02-16 22:47:16,144 INFO  org.apache.kafka.common.utils.AppInfoParser                  [] - Kafka version: 3.2.3
+2024-02-16 22:47:16,144 INFO  org.apache.kafka.common.utils.AppInfoParser                  [] - Kafka commitId: 50029d3ed8ba576f
+2024-02-16 22:47:16,144 INFO  org.apache.kafka.common.utils.AppInfoParser                  [] - Kafka startTimeMs: 1708091236143
+2024-02-16 22:47:16,257 INFO  org.apache.kafka.clients.Metadata                            [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Cluster ID: 0lgNxGuOTou8OSP5mfUTsw
+2024-02-16 22:47:16,258 INFO  org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumerBase [] - Consumer subtask 0 will start reading the following 1 partitions from the committed group offsets in Kafka: [KafkaTopicPartition{topic='price', partition=0}]
+2024-02-16 22:47:16,259 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Source: Custom Source -> Sink: Print to Std. Out (1/1)#0 (654f48bd5e9071fc02c7077422419679_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from INITIALIZING to RUNNING.
+2024-02-16 22:47:16,262 INFO  org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumerBase [] - Consumer subtask 0 creating fetcher with offsets {KafkaTopicPartition{topic='price', partition=0}=-915623761773}.
+2024-02-16 22:47:16,265 INFO  org.apache.kafka.clients.consumer.ConsumerConfig             [] - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:29092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-price-consumer-group-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = price-consumer-group
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+
+2024-02-16 22:47:16,268 INFO  org.apache.kafka.common.utils.AppInfoParser                  [] - Kafka version: 3.2.3
+2024-02-16 22:47:16,268 INFO  org.apache.kafka.common.utils.AppInfoParser                  [] - Kafka commitId: 50029d3ed8ba576f
+2024-02-16 22:47:16,268 INFO  org.apache.kafka.common.utils.AppInfoParser                  [] - Kafka startTimeMs: 1708091236268
+2024-02-16 22:47:16,269 INFO  org.apache.kafka.clients.consumer.KafkaConsumer              [] - [Consumer clientId=consumer-price-consumer-group-2, groupId=price-consumer-group] Subscribed to partition(s): price-0
+2024-02-16 22:47:16,279 INFO  org.apache.kafka.clients.Metadata                            [] - [Consumer clientId=consumer-price-consumer-group-2, groupId=price-consumer-group] Resetting the last seen epoch of partition price-0 to 0 since the associated topicId changed from null to Y25yZqMuRYywFXUbk-FbHw
+2024-02-16 22:47:16,279 INFO  org.apache.kafka.clients.Metadata                            [] - [Consumer clientId=consumer-price-consumer-group-2, groupId=price-consumer-group] Cluster ID: 0lgNxGuOTou8OSP5mfUTsw
+2024-02-16 22:47:16,290 INFO  org.apache.kafka.clients.consumer.internals.ConsumerCoordinator [] - [Consumer clientId=consumer-price-consumer-group-2, groupId=price-consumer-group] Discovered group coordinator 127.0.0.1:29092 (id: 2147483646 rack: null)
+2024-02-16 22:47:16,312 INFO  org.apache.kafka.clients.consumer.internals.ConsumerCoordinator [] - [Consumer clientId=consumer-price-consumer-group-2, groupId=price-consumer-group] Found no committed offset for partition price-0
+2024-02-16 22:47:16,323 INFO  org.apache.kafka.clients.consumer.internals.SubscriptionState [] - [Consumer clientId=consumer-price-consumer-group-2, groupId=price-consumer-group] Resetting offset for partition price-0 to position FetchPosition{offset=22, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:29092 (id: 1 rack: null)], epoch=0}}.
+2024-02-16 22:56:16,336 INFO  org.apache.kafka.clients.NetworkClient                       [] - [Consumer clientId=consumer-price-consumer-group-2, groupId=price-consumer-group] Node -1 disconnected.
+2024-02-16 23:22:53,918 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Attempting to cancel task Source: Custom Source -> Sink: Print to Std. Out (1/1)#0 (654f48bd5e9071fc02c7077422419679_cbc357ccb763df2852fee8c4fc7d55f2_0_0).
+2024-02-16 23:22:53,919 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Source: Custom Source -> Sink: Print to Std. Out (1/1)#0 (654f48bd5e9071fc02c7077422419679_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from RUNNING to CANCELING.
+2024-02-16 23:22:53,920 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Triggering cancellation of task code Source: Custom Source -> Sink: Print to Std. Out (1/1)#0 (654f48bd5e9071fc02c7077422419679_cbc357ccb763df2852fee8c4fc7d55f2_0_0).
+2024-02-16 23:22:53,924 INFO  org.apache.kafka.clients.consumer.internals.ConsumerCoordinator [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-02-16 23:22:53,924 INFO  org.apache.kafka.clients.consumer.internals.ConsumerCoordinator [] - [Consumer clientId=consumer-price-consumer-group-1, groupId=price-consumer-group] Request joining group due to: consumer pro-actively leaving the group
+2024-02-16 23:22:53,925 INFO  org.apache.kafka.common.metrics.Metrics                      [] - Metrics scheduler closed
+2024-02-16 23:22:53,925 INFO  org.apache.kafka.common.metrics.Metrics                      [] - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-02-16 23:22:53,926 INFO  org.apache.kafka.common.metrics.Metrics                      [] - Metrics reporters closed
+2024-02-16 23:22:53,928 INFO  org.apache.kafka.clients.consumer.internals.ConsumerCoordinator [] - [Consumer clientId=consumer-price-consumer-group-2, groupId=price-consumer-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-02-16 23:22:53,928 INFO  org.apache.kafka.clients.consumer.internals.ConsumerCoordinator [] - [Consumer clientId=consumer-price-consumer-group-2, groupId=price-consumer-group] Request joining group due to: consumer pro-actively leaving the group
+2024-02-16 23:22:53,929 INFO  org.apache.kafka.common.metrics.Metrics                      [] - Metrics scheduler closed
+2024-02-16 23:22:53,930 INFO  org.apache.kafka.common.metrics.Metrics                      [] - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-02-16 23:22:53,930 INFO  org.apache.kafka.common.metrics.Metrics                      [] - Metrics reporters closed
+2024-02-16 23:22:53,932 INFO  org.apache.kafka.common.utils.AppInfoParser                  [] - App info kafka.consumer for consumer-price-consumer-group-1 unregistered
+2024-02-16 23:22:53,933 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Source: Custom Source -> Sink: Print to Std. Out (1/1)#0 (654f48bd5e9071fc02c7077422419679_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from CANCELING to CANCELED.
+2024-02-16 23:22:53,933 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Freeing task resources for Source: Custom Source -> Sink: Print to Std. Out (1/1)#0 (654f48bd5e9071fc02c7077422419679_cbc357ccb763df2852fee8c4fc7d55f2_0_0).
+2024-02-16 23:22:53,935 INFO  org.apache.kafka.common.utils.AppInfoParser                  [] - App info kafka.consumer for consumer-price-consumer-group-2 unregistered
+2024-02-16 23:22:53,935 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Un-registering task and sending final execution state CANCELED to JobManager for task Source: Custom Source -> Sink: Print to Std. Out (1/1)#0 654f48bd5e9071fc02c7077422419679_cbc357ccb763df2852fee8c4fc7d55f2_0_0.
+2024-02-16 23:22:53,947 INFO  org.apache.flink.runtime.taskexecutor.slot.TaskSlotTableImpl [] - Free slot TaskSlot(index:0, state:ACTIVE, resource profile: ResourceProfile{cpuCores=1, taskHeapMemory=384.000mb (402653174 bytes), taskOffHeapMemory=0 bytes, managedMemory=512.000mb (536870920 bytes), networkMemory=128.000mb (134217730 bytes)}, allocationId: b5be3f149b27a58d5f176929d451d9ff, jobId: 0aaca53c01eb6a3abbadcf7346d60f5e).
+2024-02-16 23:22:53,948 INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService [] - Remove job 0aaca53c01eb6a3abbadcf7346d60f5e from job leader monitoring.
+2024-02-16 23:22:53,948 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Close JobManager connection for job 0aaca53c01eb6a3abbadcf7346d60f5e.
+2024-02-16 23:23:12,437 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - RECEIVED SIGNAL 15: SIGTERM. Shutting down as requested.
+2024-02-16 23:23:12,438 INFO  org.apache.flink.runtime.state.TaskExecutorLocalStateStoresManager [] - Shutting down TaskExecutorLocalStateStoresManager.
+2024-02-16 23:23:12,438 INFO  org.apache.flink.runtime.blob.PermanentBlobCache             [] - Shutting down BLOB cache
+2024-02-16 23:23:12,438 INFO  org.apache.flink.runtime.state.TaskExecutorStateChangelogStoragesManager [] - Shutting down TaskExecutorStateChangelogStoragesManager.
+2024-02-16 23:23:12,438 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Stopping TaskExecutor akka.tcp://flink@localhost:60235/user/rpc/taskmanager_0.
+2024-02-16 23:23:12,438 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Close ResourceManager connection a9a9660af93dd66bb15142f7109d162b.
+2024-02-16 23:23:12,439 INFO  org.apache.flink.runtime.blob.TransientBlobCache             [] - Shutting down BLOB cache
+2024-02-16 23:23:12,441 INFO  org.apache.flink.runtime.state.TaskExecutorChannelStateExecutorFactoryManager [] - Shutting down TaskExecutorChannelStateExecutorFactoryManager.
